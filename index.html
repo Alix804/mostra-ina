@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finestra sul Mare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Tanti Nomi, Un Solo Mare</h1>
+    </header>
+
+    <main class="container">
+        <div class="wall">            
+            <div class="window-frame">
+                <!-- Video di sfondo -->
+                <video class="ocean-video" autoplay loop muted playsinline>
+                    <source src="assets/ocean-waves.mp4" type="video/mp4">
+                    Il tuo browser non supporta il video.
+                </video>
+
+                <!-- Cornice finestra con ante -->
+                <div class="window-overlay"></div>
+
+                <!-- Audio onde del mare -->
+                <audio id="ocean-audio" loop>
+                    <source src="assets/ocean-waves.mp3" type="audio/mpeg">
+                    Il tuo browser non supporta l'audio.
+                </audio>
+
+
+            </div>
+        </div> 
+               <!-- Frecce di navigazione -->
+                <a href="pagina1.html" class="nav-arrow nav-arrow-left" aria-label="Pagina precedente">
+                    <svg width="50" height="50" viewBox="0 0 50 50">
+                        <path d="M30 10 L15 25 L30 40" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="pagina2.html" class="nav-arrow nav-arrow-right" aria-label="Pagina successiva">
+                    <svg width="50" height="50" viewBox="0 0 50 50">
+                        <path d="M20 10 L35 25 L20 40" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
