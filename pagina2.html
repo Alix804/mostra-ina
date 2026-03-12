@@ -13,8 +13,9 @@
 
     <main class="gallery-container gallery-row">
         <div class="painting-frame">
-            <div class="painting">
+            <div class="painting" data-painting-index="0">
                 <img src="assets/quadro1.jpg" alt="Opera 1">
+                <div class="painting-hover-title">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
                 <h3>Oceano I</h3>
@@ -23,8 +24,9 @@
         </div>
 
         <div class="painting-frame">
-            <div class="painting">
+            <div class="painting" data-painting-index="1">
                 <img src="assets/quadro2.jpg" alt="Opera 2">
+                <div class="painting-hover-title">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
                 <h3>Oceano II</h3>
@@ -33,8 +35,9 @@
         </div>
 
         <div class="painting-frame">
-            <div class="painting">
+            <div class="painting" data-painting-index="2">
                 <img src="assets/quadro1.jpg" alt="Opera 3">
+                <div class="painting-hover-title">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
                 <h3>Oceano III</h3>
@@ -43,8 +46,9 @@
         </div>
 
         <div class="painting-frame">
-            <div class="painting">
+            <div class="painting" data-painting-index="3">
                 <img src="assets/quadro2.jpg" alt="Opera 4">
+                <div class="painting-hover-title">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
                 <h3>Oceano IV</h3>
@@ -53,8 +57,9 @@
         </div>
 
         <div class="painting-frame">
-            <div class="painting">
+            <div class="painting" data-painting-index="4">
                 <img src="assets/quadro1.jpg" alt="Opera 5">
+                <div class="painting-hover-title">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
                 <h3>Oceano V</h3>
@@ -64,7 +69,71 @@
 
         <a href="pagina1.html" class="back-button">← Pagina Precedente</a>
         <a href="index.html" class="next-button">Torna alla Finestra →</a>
-
     </main>
+
+    <!-- Modale dettaglio opera -->
+    <div id="painting-modal" class="modal-overlay">
+        <button class="modal-close">&times;</button>
+        
+        <!-- Barra miniature -->
+        <div class="modal-thumbnails">
+            <div class="thumbnail-item" data-index="0" data-title="Oceano I"></div>
+            <div class="thumbnail-item" data-index="1" data-title="Oceano II"></div>
+            <div class="thumbnail-item" data-index="2" data-title="Oceano III"></div>
+            <div class="thumbnail-item" data-index="3" data-title="Oceano IV"></div>
+            <div class="thumbnail-item" data-index="4" data-title="Oceano V"></div>
+            <div class="thumbnail-tooltip"></div>
+        </div>
+
+        <!-- Contenitore principale -->
+        <div class="modal-container">
+            <!-- Dettagli per opera 1 -->
+            <div class="painting-detail" data-index="0">
+                <img src="assets/quadro1.jpg" alt="Oceano I">
+                <div class="painting-info">
+                    <h2>Oceano I</h2>
+                    <p>Placeholder descrizione opera 1. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 2 -->
+            <div class="painting-detail" data-index="1">
+                <img src="assets/quadro2.jpg" alt="Oceano II">
+                <div class="painting-info">
+                    <h2>Oceano II</h2>
+                    <p>Placeholder descrizione opera 2. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 3 -->
+            <div class="painting-detail" data-index="2">
+                <img src="assets/quadro1.jpg" alt="Oceano III">
+                <div class="painting-info">
+                    <h2>Oceano III</h2>
+                    <p>Placeholder descrizione opera 3. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 4 -->
+            <div class="painting-detail" data-index="3">
+                <img src="assets/quadro2.jpg" alt="Oceano IV">
+                <div class="painting-info">
+                    <h2>Oceano IV</h2>
+                    <p>Placeholder descrizione opera 4. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 5 -->
+            <div class="painting-detail" data-index="4">
+                <img src="assets/quadro1.jpg" alt="Oceano V">
+                <div class="painting-info">
+                    <h2>Oceano V</h2>
+                    <p>Placeholder descrizione opera 5. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -13,8 +13,9 @@
 
     <main class="gallery-container gallery-row">
         <div class="painting-frame">
-            <div class="painting">
+            <div class="painting" data-painting-index="0">
                 <img src="assets/quadro1.jpg" alt="Opera 1">
+                <div class="painting-hover-title">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
                 <h3>Mare I</h3>
@@ -23,8 +24,9 @@
         </div>
 
         <div class="painting-frame">
-            <div class="painting">
+            <div class="painting" data-painting-index="1">
                 <img src="assets/quadro2.jpg" alt="Opera 2">
+                <div class="painting-hover-title">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
                 <h3>Mare II</h3>
@@ -33,8 +35,9 @@
         </div>
 
         <div class="painting-frame">
-            <div class="painting">
+            <div class="painting" data-painting-index="2">
                 <img src="assets/quadro2.jpg" alt="Opera 3">
+                <div class="painting-hover-title">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
                 <h3>Mare III</h3>
@@ -43,8 +46,9 @@
         </div>
 
         <div class="painting-frame">
-            <div class="painting">
+            <div class="painting" data-painting-index="3">
                 <img src="assets/quadro1.jpg" alt="Opera 4">
+                <div class="painting-hover-title">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
                 <h3>Mare IV</h3>
@@ -53,8 +57,9 @@
         </div>
 
         <div class="painting-frame">
-            <div class="painting">
+            <div class="painting" data-painting-index="4">
                 <img src="assets/quadro1.jpg" alt="Opera 5">
+                <div class="painting-hover-title">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
                 <h3>Mare V</h3>
@@ -63,8 +68,9 @@
         </div>
 
         <div class="painting-frame">
-            <div class="painting">
+            <div class="painting" data-painting-index="5">
                 <img src="assets/quadro2.jpg" alt="Opera 6">
+                <div class="painting-hover-title">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
                 <h3>Mare VI</h3>
@@ -73,8 +79,9 @@
         </div>
 
         <div class="painting-frame">
-            <div class="painting">
+            <div class="painting" data-painting-index="6">
                 <img src="assets/quadro2.jpg" alt="Opera 7">
+                <div class="painting-hover-title">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
                 <h3>Mare VII</h3>
@@ -85,5 +92,90 @@
         <a href="pagina2.html" class="back-button">← Pagina Successiva</a>
         <a href="index.html" class="next-button">Torna alla Finestra →</a>
     </main>
+
+    <!-- Modale dettaglio opera -->
+    <div id="painting-modal" class="modal-overlay">
+        <button class="modal-close">&times;</button>
+        
+        <!-- Barra miniature -->
+        <div class="modal-thumbnails">
+            <div class="thumbnail-item" data-index="0" data-title="Mare I"></div>
+            <div class="thumbnail-item" data-index="1" data-title="Mare II"></div>
+            <div class="thumbnail-item" data-index="2" data-title="Mare III"></div>
+            <div class="thumbnail-item" data-index="3" data-title="Mare IV"></div>
+            <div class="thumbnail-item" data-index="4" data-title="Mare V"></div>
+            <div class="thumbnail-item" data-index="5" data-title="Mare VI"></div>
+            <div class="thumbnail-item" data-index="6" data-title="Mare VII"></div>
+            <div class="thumbnail-tooltip"></div>
+        </div>
+
+        <!-- Contenitore principale -->
+        <div class="modal-container">
+            <!-- Dettagli per opera 1 -->
+            <div class="painting-detail" data-index="0">
+                <img src="assets/quadro1.jpg" alt="Mare I">
+                <div class="painting-info">
+                    <h2>Mare I</h2>
+                    <p>Placeholder descrizione opera 1. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 2 -->
+            <div class="painting-detail" data-index="1">
+                <img src="assets/quadro2.jpg" alt="Mare II">
+                <div class="painting-info">
+                    <h2>Mare II</h2>
+                    <p>Placeholder descrizione opera 2. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 3 -->
+            <div class="painting-detail" data-index="2">
+                <img src="assets/quadro2.jpg" alt="Mare III">
+                <div class="painting-info">
+                    <h2>Mare III</h2>
+                    <p>Placeholder descrizione opera 3. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 4 -->
+            <div class="painting-detail" data-index="3">
+                <img src="assets/quadro1.jpg" alt="Mare IV">
+                <div class="painting-info">
+                    <h2>Mare IV</h2>
+                    <p>Placeholder descrizione opera 4. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 5 -->
+            <div class="painting-detail" data-index="4">
+                <img src="assets/quadro1.jpg" alt="Mare V">
+                <div class="painting-info">
+                    <h2>Mare V</h2>
+                    <p>Placeholder descrizione opera 5. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 6 -->
+            <div class="painting-detail" data-index="5">
+                <img src="assets/quadro2.jpg" alt="Mare VI">
+                <div class="painting-info">
+                    <h2>Mare VI</h2>
+                    <p>Placeholder descrizione opera 6. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 7 -->
+            <div class="painting-detail" data-index="6">
+                <img src="assets/quadro2.jpg" alt="Mare VII">
+                <div class="painting-info">
+                    <h2>Mare VII</h2>
+                    <p>Placeholder descrizione opera 7. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
