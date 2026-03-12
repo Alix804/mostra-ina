@@ -453,18 +453,18 @@ header h1 {
 
 /* Contenitore modale */
 .modal-container {
-    width: 80%;
-    max-width: 1200px;
-    height: 70vh;
-    max-height: 600px;
+    width: 95%;
+    max-width: 1800px;
+    height: 85vh;
+    max-height: 900px;
     background: #e8dcc4;
-    border: 12px solid #8b7355;
+    border: 8px solid #8b7355;
     box-shadow: 
         0 0 50px rgba(0, 0, 0, 0.8),
         inset 0 0 30px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 /* Dettaglio singola opera */
@@ -472,9 +472,10 @@ header h1 {
     display: none;
     width: 100%;
     height: 100%;
-    padding: 2rem;
-    gap: 2rem;
-    align-items: center;
+    padding: 1rem;
+    gap: 0;
+    align-items: flex-start;
+    position: relative;
 }
 
 .painting-detail.active {
@@ -482,37 +483,93 @@ header h1 {
 }
 
 .painting-detail img {
-    max-width: 50%;
+    max-width: 20%;
     max-height: 100%;
     object-fit: contain;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
     border: 8px solid #dad3cb;
+    flex-shrink: 0;
 }
 
 /* Info opera */
 .painting-info {
     flex: 1;
-    padding: 1rem 2rem;
+    padding: 0.2rem 0.8rem;
     color: #2c2416;
-    overflow-y: auto;
-    max-height: 100%;
+    overflow-y: hidden;
+    height: 100%;
+    column-count: 3;
+    column-gap: 1.2rem;
+    column-rule: 1px solid #d0c8b8;
+    column-fill: auto;
 }
 
 .painting-info h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
     color: #1a1410;
     font-weight: 400;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     border-bottom: 2px solid #8b7355;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
+    column-span: all;
 }
 
 .painting-info p {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 0.8rem;
+    line-height: 1.4;
     font-family: 'Georgia', serif;
     text-align: justify;
+    margin-bottom: 0.4rem;
+}
+
+.painting-info h3 {
+    font-size: 1rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0.3rem;
+    color: #1a1410;
+    font-weight: 600;
+    break-after: avoid;
+}
+
+.painting-info h4 {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    color: #2c2416;
+    font-weight: 600;
+    font-style: italic;
+    break-after: avoid;
+}
+
+.painting-info ul {
+    margin: 0.3rem 0 0.4rem 0.9rem;
+    break-inside: avoid;
+}
+
+.painting-info li {
+    font-size: 0.75rem;
+    line-height: 1.35;
+    margin-bottom: 0.2rem;
+}
+
+.painting-info em {
+    color: #1a1410;
+}
+
+.painting-info strong {
+    font-weight: 600;
+}
+
+.painting-bottom-image {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    max-width: 40%;
+    max-height: 25vh;
+    object-fit: contain;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 4px solid #dad3cb;
 }
 
 /* Responsive modale */
