@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galleria - Opera 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="gallery-page">
+    <header>
+        <h1 data-i18n="header.galleryTitle">Mostra INA - Galleria</h1>
+        <div class="language-selector">
+            <select id="language-select" aria-label="Seleziona lingua">
+                <option value="ita">ITA</option>
+                <option value="eng">ENG</option>
+                <option value="cz">CZ</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="gallery-container gallery-row">
+        <div class="painting-frame">
+            <div class="painting" data-painting-index="0">
+                <img src="assets/quadro1.jpg" alt="Opera 1">
+                <div class="painting-hover-title" data-i18n="pagina3.paintings.lago1.hoverTitle">Titolo Placeholder</div>
+            </div>
+            <div class="museum-label">
+                <h3 data-i18n="pagina3.paintings.lago1.title">Lago I</h3>
+                <p>1955</p>
+            </div>
+        </div>
+
+        <div class="painting-frame">
+            <div class="painting" data-painting-index="1">
+                <img src="assets/quadro2.jpg" alt="Opera 2">
+                <div class="painting-hover-title" data-i18n="pagina3.paintings.lago2.hoverTitle">Titolo Placeholder</div>
+            </div>
+            <div class="museum-label">
+                <h3 data-i18n="pagina3.paintings.lago2.title">Lago II</h3>
+                <p>1960</p>
+            </div>
+        </div>
+
+        <div class="painting-frame">
+            <div class="painting" data-painting-index="2">
+                <img src="assets/quadro1.jpg" alt="Opera 3">
+                <div class="painting-hover-title" data-i18n="pagina3.paintings.lago3.hoverTitle">Titolo Placeholder</div>
+            </div>
+            <div class="museum-label">
+                <h3 data-i18n="pagina3.paintings.lago3.title">Lago III</h3>
+                <p>1965</p>
+            </div>
+        </div>
+
+        <div class="painting-frame">
+            <div class="painting" data-painting-index="3">
+                <img src="assets/quadro2.jpg" alt="Opera 4">
+                <div class="painting-hover-title" data-i18n="pagina3.paintings.lago4.hoverTitle">Titolo Placeholder</div>
+            </div>
+            <div class="museum-label">
+                <h3 data-i18n="pagina3.paintings.lago4.title">Lago IV</h3>
+                <p>1970</p>
+            </div>
+        </div>
+
+        <div class="painting-frame">
+            <div class="painting" data-painting-index="4">
+                <img src="assets/quadro1.jpg" alt="Opera 5">
+                <div class="painting-hover-title" data-i18n="pagina3.paintings.lago5.hoverTitle">Titolo Placeholder</div>
+            </div>
+            <div class="museum-label">
+                <h3 data-i18n="pagina3.paintings.lago5.title">Lago V</h3>
+                <p>1975</p>
+            </div>
+        </div>
+
+        <div class="painting-frame">
+            <div class="painting" data-painting-index="5">
+                <img src="assets/quadro2.jpg" alt="Opera 6">
+                <div class="painting-hover-title" data-i18n="pagina3.paintings.lago6.hoverTitle">Titolo Placeholder</div>
+            </div>
+            <div class="museum-label">
+                <h3 data-i18n="pagina3.paintings.lago6.title">Lago VI</h3>
+                <p>1980</p>
+            </div>
+        </div>
+
+        <!-- Frecce di navigazione -->
+        <a href="pagina2.html" class="nav-arrow nav-arrow-left" aria-label="Sinistra">
+            <svg width="50" height="50" viewBox="0 0 50 50">
+                <path d="M30 10 L15 25 L30 40" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <a href="index.html" class="nav-arrow nav-arrow-down" aria-label="Di fronte">
+            <svg width="50" height="50" viewBox="0 0 50 50">
+                <path d="M10 20 L25 35 L40 20" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <a href="pagina1.html" class="nav-arrow nav-arrow-right" aria-label="Destra">
+            <svg width="50" height="50" viewBox="0 0 50 50">
+                <path d="M20 10 L35 25 L20 40" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </main>
+
+    <!-- Modale dettaglio opera -->
+    <div id="painting-modal" class="modal-overlay">
+        <button class="modal-close">&times;</button>
+        
+        <!-- Barra miniature -->
+        <div class="modal-thumbnails">
+            <div class="thumbnail-item" data-index="0" data-title="Lago I"></div>
+            <div class="thumbnail-item" data-index="1" data-title="Lago II"></div>
+            <div class="thumbnail-item" data-index="2" data-title="Lago III"></div>
+            <div class="thumbnail-item" data-index="3" data-title="Lago IV"></div>
+            <div class="thumbnail-item" data-index="4" data-title="Lago V"></div>
+            <div class="thumbnail-item" data-index="5" data-title="Lago VI"></div>
+            <div class="thumbnail-tooltip"></div>
+        </div>
+
+        <!-- Contenitore principale -->
+        <div class="modal-container">
+            <!-- Dettagli per opera 1 -->
+            <div class="painting-detail" data-index="0">
+                <img src="assets/quadro1.jpg" alt="Lago I">
+                <div class="painting-info">
+                    <h2 data-i18n="pagina3.paintings.lago1.title">Lago I</h2>
+                    <p data-i18n="pagina3.paintings.lago1.description">Placeholder descrizione opera 1. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 2 -->
+            <div class="painting-detail" data-index="1">
+                <img src="assets/quadro2.jpg" alt="Lago II">
+                <div class="painting-info">
+                    <h2 data-i18n="pagina3.paintings.lago2.title">Lago II</h2>
+                    <p data-i18n="pagina3.paintings.lago2.description">Placeholder descrizione opera 2. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 3 -->
+            <div class="painting-detail" data-index="2">
+                <img src="assets/quadro1.jpg" alt="Lago III">
+                <div class="painting-info">
+                    <h2 data-i18n="pagina3.paintings.lago3.title">Lago III</h2>
+                    <p data-i18n="pagina3.paintings.lago3.description">Placeholder descrizione opera 3. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 4 -->
+            <div class="painting-detail" data-index="3">
+                <img src="assets/quadro2.jpg" alt="Lago IV">
+                <div class="painting-info">
+                    <h2 data-i18n="pagina3.paintings.lago4.title">Lago IV</h2>
+                    <p data-i18n="pagina3.paintings.lago4.description">Placeholder descrizione opera 4. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 5 -->
+            <div class="painting-detail" data-index="4">
+                <img src="assets/quadro1.jpg" alt="Lago V">
+                <div class="painting-info">
+                    <h2 data-i18n="pagina3.paintings.lago5.title">Lago V</h2>
+                    <p data-i18n="pagina3.paintings.lago5.description">Placeholder descrizione opera 5. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 6 -->
+            <div class="painting-detail" data-index="5">
+                <img src="assets/quadro2.jpg" alt="Lago VI">
+                <div class="painting-info">
+                    <h2 data-i18n="pagina3.paintings.lago6.title">Lago VI</h2>
+                    <p data-i18n="pagina3.paintings.lago6.description">Placeholder descrizione opera 6. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

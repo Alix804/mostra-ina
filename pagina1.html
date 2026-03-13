@@ -6,19 +6,26 @@
     <title>Galleria - Opera 1</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="gallery-page">
+<body class="gallery-page page-1">
     <header>
-        <h1>Mostra INA - Galleria</h1>
+        <h1 data-i18n="header.galleryTitle">Mostra INA - Galleria</h1>
+        <div class="language-selector">
+            <select id="language-select" aria-label="Seleziona lingua">
+                <option value="ita">ITA</option>
+                <option value="eng">ENG</option>
+                <option value="cz">CZ</option>
+            </select>
+        </div>
     </header>
 
     <main class="gallery-container gallery-row">
         <div class="painting-frame">
             <div class="painting" data-painting-index="0">
                 <img src="assets/Decamerone.jpeg" alt="Decamerone">
-                <div class="painting-hover-title">Lessico marino e acquatico del Decameron</div>
+                <div class="painting-hover-title" data-i18n="pagina1.paintings.mare1.hoverTitle">Lessico marino e acquatico del Decameron</div>
             </div>
             <div class="museum-label">
-                <h3>Mare I</h3>
+                <h3 data-i18n="pagina1.paintings.mare1.title">Mare I</h3>
                 <p>1887</p>
             </div>
         </div>
@@ -26,10 +33,10 @@
         <div class="painting-frame">
             <div class="painting" data-painting-index="1">
                 <img src="assets/quadro2.jpg" alt="Opera 2">
-                <div class="painting-hover-title">Titolo Placeholder</div>
+                <div class="painting-hover-title" data-i18n="pagina1.paintings.mare2.hoverTitle">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
-                <h3>Mare II</h3>
+                <h3 data-i18n="pagina1.paintings.mare2.title">Mare II</h3>
                 <p>1892</p>
             </div>
         </div>
@@ -37,10 +44,10 @@
         <div class="painting-frame">
             <div class="painting" data-painting-index="2">
                 <img src="assets/quadro2.jpg" alt="Opera 3">
-                <div class="painting-hover-title">Titolo Placeholder</div>
+                <div class="painting-hover-title" data-i18n="pagina1.paintings.mare3.hoverTitle">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
-                <h3>Mare III</h3>
+                <h3 data-i18n="pagina1.paintings.mare3.title">Mare III</h3>
                 <p>1898</p>
             </div>
         </div>
@@ -48,10 +55,10 @@
         <div class="painting-frame">
             <div class="painting" data-painting-index="3">
                 <img src="assets/quadro1.jpg" alt="Opera 4">
-                <div class="painting-hover-title">Titolo Placeholder</div>
+                <div class="painting-hover-title" data-i18n="pagina1.paintings.mare4.hoverTitle">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
-                <h3>Mare IV</h3>
+                <h3 data-i18n="pagina1.paintings.mare4.title">Mare IV</h3>
                 <p>1905</p>
             </div>
         </div>
@@ -59,10 +66,10 @@
         <div class="painting-frame">
             <div class="painting" data-painting-index="4">
                 <img src="assets/quadro1.jpg" alt="Opera 5">
-                <div class="painting-hover-title">Titolo Placeholder</div>
+                <div class="painting-hover-title" data-i18n="pagina1.paintings.mare5.hoverTitle">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
-                <h3>Mare V</h3>
+                <h3 data-i18n="pagina1.paintings.mare5.title">Mare V</h3>
                 <p>1912</p>
             </div>
         </div>
@@ -70,10 +77,10 @@
         <div class="painting-frame">
             <div class="painting" data-painting-index="5">
                 <img src="assets/quadro2.jpg" alt="Opera 6">
-                <div class="painting-hover-title">Titolo Placeholder</div>
+                <div class="painting-hover-title" data-i18n="pagina1.paintings.mare6.hoverTitle">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
-                <h3>Mare VI</h3>
+                <h3 data-i18n="pagina1.paintings.mare6.title">Mare VI</h3>
                 <p>1920</p>
             </div>
         </div>
@@ -81,16 +88,30 @@
         <div class="painting-frame">
             <div class="painting" data-painting-index="6">
                 <img src="assets/quadro2.jpg" alt="Opera 7">
-                <div class="painting-hover-title">Titolo Placeholder</div>
+                <div class="painting-hover-title" data-i18n="pagina1.paintings.mare7.hoverTitle">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
-                <h3>Mare VII</h3>
+                <h3 data-i18n="pagina1.paintings.mare7.title">Mare VII</h3>
                 <p>1925</p>
             </div>
         </div>
 
-        <a href="pagina2.html" class="back-button">← Pagina Successiva</a>
-        <a href="index.html" class="next-button">Torna alla Finestra →</a>
+        <!-- Frecce di navigazione -->
+        <a href="pagine3.html" class="nav-arrow nav-arrow-left" aria-label="Sinistra">
+            <svg width="50" height="50" viewBox="0 0 50 50">
+                <path d="M30 10 L15 25 L30 40" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <a href="pagina2.html" class="nav-arrow nav-arrow-down" aria-label="Di fronte">
+            <svg width="50" height="50" viewBox="0 0 50 50">
+                <path d="M10 20 L25 35 L40 20" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <a href="index.html" class="nav-arrow nav-arrow-right" aria-label="Destra">
+            <svg width="50" height="50" viewBox="0 0 50 50">
+                <path d="M20 10 L35 25 L20 40" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
     </main>
 
     <!-- Modale dettaglio opera -->
@@ -113,7 +134,7 @@
         <div class="modal-container">
             <!-- Dettagli per opera 1 -->
             <div class="painting-detail" data-index="0">
-                <div class="painting-info">
+                <div class="painting-info" data-i18n-html="pagina1.paintings.mare1.fullText">
                     <h2>Lessico marino e acquatico nel Decameron</h2>
                     <p><em>a cura di Claudia Palmieri</em></p>
                     
@@ -181,8 +202,8 @@
             <div class="painting-detail" data-index="1">
                 <img src="assets/quadro2.jpg" alt="Mare II">
                 <div class="painting-info">
-                    <h2>Mare II</h2>
-                    <p>Placeholder descrizione opera 2. Inserisci qui il testo specifico per questa opera.</p>
+                    <h2 data-i18n="pagina1.paintings.mare2.title">Mare II</h2>
+                    <p data-i18n="pagina1.paintings.mare2.description">Placeholder descrizione opera 2. Inserisci qui il testo specifico per questa opera.</p>
                 </div>
             </div>
 
@@ -190,8 +211,8 @@
             <div class="painting-detail" data-index="2">
                 <img src="assets/quadro2.jpg" alt="Mare III">
                 <div class="painting-info">
-                    <h2>Mare III</h2>
-                    <p>Placeholder descrizione opera 3. Inserisci qui il testo specifico per questa opera.</p>
+                    <h2 data-i18n="pagina1.paintings.mare3.title">Mare III</h2>
+                    <p data-i18n="pagina1.paintings.mare3.description">Placeholder descrizione opera 3. Inserisci qui il testo specifico per questa opera.</p>
                 </div>
             </div>
 
@@ -199,8 +220,8 @@
             <div class="painting-detail" data-index="3">
                 <img src="assets/quadro1.jpg" alt="Mare IV">
                 <div class="painting-info">
-                    <h2>Mare IV</h2>
-                    <p>Placeholder descrizione opera 4. Inserisci qui il testo specifico per questa opera.</p>
+                    <h2 data-i18n="pagina1.paintings.mare4.title">Mare IV</h2>
+                    <p data-i18n="pagina1.paintings.mare4.description">Placeholder descrizione opera 4. Inserisci qui il testo specifico per questa opera.</p>
                 </div>
             </div>
 
@@ -208,8 +229,8 @@
             <div class="painting-detail" data-index="4">
                 <img src="assets/quadro1.jpg" alt="Mare V">
                 <div class="painting-info">
-                    <h2>Mare V</h2>
-                    <p>Placeholder descrizione opera 5. Inserisci qui il testo specifico per questa opera.</p>
+                    <h2 data-i18n="pagina1.paintings.mare5.title">Mare V</h2>
+                    <p data-i18n="pagina1.paintings.mare5.description">Placeholder descrizione opera 5. Inserisci qui il testo specifico per questa opera.</p>
                 </div>
             </div>
 
@@ -217,8 +238,8 @@
             <div class="painting-detail" data-index="5">
                 <img src="assets/quadro2.jpg" alt="Mare VI">
                 <div class="painting-info">
-                    <h2>Mare VI</h2>
-                    <p>Placeholder descrizione opera 6. Inserisci qui il testo specifico per questa opera.</p>
+                    <h2 data-i18n="pagina1.paintings.mare6.title">Mare VI</h2>
+                    <p data-i18n="pagina1.paintings.mare6.description">Placeholder descrizione opera 6. Inserisci qui il testo specifico per questa opera.</p>
                 </div>
             </div>
 
@@ -226,13 +247,14 @@
             <div class="painting-detail" data-index="6">
                 <img src="assets/quadro2.jpg" alt="Mare VII">
                 <div class="painting-info">
-                    <h2>Mare VII</h2>
-                    <p>Placeholder descrizione opera 7. Inserisci qui il testo specifico per questa opera.</p>
+                    <h2 data-i18n="pagina1.paintings.mare7.title">Mare VII</h2>
+                    <p data-i18n="pagina1.paintings.mare7.description">Placeholder descrizione opera 7. Inserisci qui il testo specifico per questa opera.</p>
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

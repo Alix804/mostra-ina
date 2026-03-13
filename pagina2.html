@@ -6,19 +6,26 @@
     <title>Galleria - Opera 2</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="gallery-page">
+<body class="gallery-page page-2">
     <header>
-        <h1>Mostra INA - Galleria</h1>
+        <h1 data-i18n="header.galleryTitle">Mostra INA - Galleria</h1>
+        <div class="language-selector">
+            <select id="language-select" aria-label="Seleziona lingua">
+                <option value="ita">ITA</option>
+                <option value="eng">ENG</option>
+                <option value="cz">CZ</option>
+            </select>
+        </div>
     </header>
 
     <main class="gallery-container gallery-row">
         <div class="painting-frame">
             <div class="painting" data-painting-index="0">
                 <img src="assets/quadro1.jpg" alt="Opera 1">
-                <div class="painting-hover-title">Titolo Placeholder</div>
+                <div class="painting-hover-title" data-i18n="pagina2.paintings.oceano1.hoverTitle">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
-                <h3>Oceano I</h3>
+                <h3 data-i18n="pagina2.paintings.oceano1.title">Oceano I</h3>
                 <p>1930</p>
             </div>
         </div>
@@ -26,10 +33,10 @@
         <div class="painting-frame">
             <div class="painting" data-painting-index="1">
                 <img src="assets/quadro2.jpg" alt="Opera 2">
-                <div class="painting-hover-title">Titolo Placeholder</div>
+                <div class="painting-hover-title" data-i18n="pagina2.paintings.oceano2.hoverTitle">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
-                <h3>Oceano II</h3>
+                <h3 data-i18n="pagina2.paintings.oceano2.title">Oceano II</h3>
                 <p>1935</p>
             </div>
         </div>
@@ -37,10 +44,10 @@
         <div class="painting-frame">
             <div class="painting" data-painting-index="2">
                 <img src="assets/quadro1.jpg" alt="Opera 3">
-                <div class="painting-hover-title">Titolo Placeholder</div>
+                <div class="painting-hover-title" data-i18n="pagina2.paintings.oceano3.hoverTitle">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
-                <h3>Oceano III</h3>
+                <h3 data-i18n="pagina2.paintings.oceano3.title">Oceano III</h3>
                 <p>1940</p>
             </div>
         </div>
@@ -48,10 +55,10 @@
         <div class="painting-frame">
             <div class="painting" data-painting-index="3">
                 <img src="assets/quadro2.jpg" alt="Opera 4">
-                <div class="painting-hover-title">Titolo Placeholder</div>
+                <div class="painting-hover-title" data-i18n="pagina2.paintings.oceano4.hoverTitle">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
-                <h3>Oceano IV</h3>
+                <h3 data-i18n="pagina2.paintings.oceano4.title">Oceano IV</h3>
                 <p>1945</p>
             </div>
         </div>
@@ -59,16 +66,30 @@
         <div class="painting-frame">
             <div class="painting" data-painting-index="4">
                 <img src="assets/quadro1.jpg" alt="Opera 5">
-                <div class="painting-hover-title">Titolo Placeholder</div>
+                <div class="painting-hover-title" data-i18n="pagina2.paintings.oceano5.hoverTitle">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
-                <h3>Oceano V</h3>
+                <h3 data-i18n="pagina2.paintings.oceano5.title">Oceano V</h3>
                 <p>1950</p>
             </div>
         </div>
 
-        <a href="pagina1.html" class="back-button">← Pagina Precedente</a>
-        <a href="index.html" class="next-button">Torna alla Finestra →</a>
+        <!-- Frecce di navigazione -->
+        <a href="index.html" class="nav-arrow nav-arrow-left" aria-label="Sinistra">
+            <svg width="50" height="50" viewBox="0 0 50 50">
+                <path d="M30 10 L15 25 L30 40" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <a href="pagina1.html" class="nav-arrow nav-arrow-down" aria-label="Di fronte">
+            <svg width="50" height="50" viewBox="0 0 50 50">
+                <path d="M10 20 L25 35 L40 20" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <a href="pagine3.html" class="nav-arrow nav-arrow-right" aria-label="Destra">
+            <svg width="50" height="50" viewBox="0 0 50 50">
+                <path d="M20 10 L35 25 L20 40" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
     </main>
 
     <!-- Modale dettaglio opera -->
@@ -91,8 +112,8 @@
             <div class="painting-detail" data-index="0">
                 <img src="assets/quadro1.jpg" alt="Oceano I">
                 <div class="painting-info">
-                    <h2>Oceano I</h2>
-                    <p>Placeholder descrizione opera 1. Inserisci qui il testo specifico per questa opera.</p>
+                    <h2 data-i18n="pagina2.paintings.oceano1.title">Oceano I</h2>
+                    <p data-i18n="pagina2.paintings.oceano1.description">Placeholder descrizione opera 1. Inserisci qui il testo specifico per questa opera.</p>
                 </div>
             </div>
 
@@ -100,8 +121,8 @@
             <div class="painting-detail" data-index="1">
                 <img src="assets/quadro2.jpg" alt="Oceano II">
                 <div class="painting-info">
-                    <h2>Oceano II</h2>
-                    <p>Placeholder descrizione opera 2. Inserisci qui il testo specifico per questa opera.</p>
+                    <h2 data-i18n="pagina2.paintings.oceano2.title">Oceano II</h2>
+                    <p data-i18n="pagina2.paintings.oceano2.description">Placeholder descrizione opera 2. Inserisci qui il testo specifico per questa opera.</p>
                 </div>
             </div>
 
@@ -109,8 +130,8 @@
             <div class="painting-detail" data-index="2">
                 <img src="assets/quadro1.jpg" alt="Oceano III">
                 <div class="painting-info">
-                    <h2>Oceano III</h2>
-                    <p>Placeholder descrizione opera 3. Inserisci qui il testo specifico per questa opera.</p>
+                    <h2 data-i18n="pagina2.paintings.oceano3.title">Oceano III</h2>
+                    <p data-i18n="pagina2.paintings.oceano3.description">Placeholder descrizione opera 3. Inserisci qui il testo specifico per questa opera.</p>
                 </div>
             </div>
 
@@ -118,8 +139,8 @@
             <div class="painting-detail" data-index="3">
                 <img src="assets/quadro2.jpg" alt="Oceano IV">
                 <div class="painting-info">
-                    <h2>Oceano IV</h2>
-                    <p>Placeholder descrizione opera 4. Inserisci qui il testo specifico per questa opera.</p>
+                    <h2 data-i18n="pagina2.paintings.oceano4.title">Oceano IV</h2>
+                    <p data-i18n="pagina2.paintings.oceano4.description">Placeholder descrizione opera 4. Inserisci qui il testo specifico per questa opera.</p>
                 </div>
             </div>
 
@@ -127,13 +148,14 @@
             <div class="painting-detail" data-index="4">
                 <img src="assets/quadro1.jpg" alt="Oceano V">
                 <div class="painting-info">
-                    <h2>Oceano V</h2>
-                    <p>Placeholder descrizione opera 5. Inserisci qui il testo specifico per questa opera.</p>
+                    <h2 data-i18n="pagina2.paintings.oceano5.title">Oceano V</h2>
+                    <p data-i18n="pagina2.paintings.oceano5.description">Placeholder descrizione opera 5. Inserisci qui il testo specifico per questa opera.</p>
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

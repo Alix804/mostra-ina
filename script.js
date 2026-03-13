@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mostra notifica che l'audio è stato attivato
     function showAudioNotification() {
         const notification = document.createElement('div');
+        notification.setAttribute('data-i18n', 'audio.activated');
         notification.textContent = '🔊 Audio attivato';
         notification.style.cssText = `
             position: fixed;
@@ -49,6 +50,13 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         
         document.body.appendChild(notification);
+        
+        // Applica traduzione se disponibile
+        if (window.translations && window.currentLanguage) {
+            const lang = window.currentLanguage;
+            const text = window.translations[lang]?.audio?.activated || '🔊 Audio attivato';
+            notification.textContent = text;
+        }
         
         setTimeout(() => {
             notification.remove();
@@ -77,12 +85,12 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Messaggio iniziale per informare l'utente
         const initialMessage = document.createElement('div');
+        initialMessage.setAttribute('data-i18n', 'audio.clickToActivate');
         initialMessage.textContent = 'Clicca per attivare l\'audio delle onde';
         initialMessage.style.cssText = `
             position: fixed;
             bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
+            right: 20px;
             background: rgba(0, 0, 0, 0.7);
             color: white;
             padding: 0.8rem 1.5rem;
@@ -93,6 +101,13 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         
         document.body.appendChild(initialMessage);
+        
+        // Applica traduzione se disponibile
+        if (window.translations && window.currentLanguage) {
+            const lang = window.currentLanguage;
+            const text = window.translations[lang]?.audio?.clickToActivate || 'Clicca per attivare l\'audio delle onde';
+            initialMessage.textContent = text;
+        }
         
         // Rimuovi il messaggio quando l'audio viene attivato
         document.addEventListener('click', function removeMessage() {

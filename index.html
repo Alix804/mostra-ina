@@ -8,7 +8,14 @@
 </head>
 <body>
     <header>
-        <h1>Tanti Nomi, Un Solo Mare</h1>
+        <h1 data-i18n="header.title">Tanti Nomi, Un Solo Mare</h1>
+        <div class="language-selector">
+            <select id="language-select" aria-label="Seleziona lingua">
+                <option value="ita">ITA</option>
+                <option value="eng">ENG</option>
+                <option value="cz">CZ</option>
+            </select>
+        </div>
     </header>
 
     <main class="container">
@@ -33,18 +40,24 @@
             </div>
         </div> 
                <!-- Frecce di navigazione -->
-                <a href="pagina1.html" class="nav-arrow nav-arrow-left" aria-label="Pagina precedente">
+                <a href="pagina1.html" class="nav-arrow nav-arrow-left" aria-label="Sinistra">
                     <svg width="50" height="50" viewBox="0 0 50 50">
                         <path d="M30 10 L15 25 L30 40" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
-                <a href="pagina2.html" class="nav-arrow nav-arrow-right" aria-label="Pagina successiva">
+                <a href="pagine3.html" class="nav-arrow nav-arrow-down" aria-label="Di fronte">
+                    <svg width="50" height="50" viewBox="0 0 50 50">
+                        <path d="M10 20 L25 35 L40 20" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="pagina2.html" class="nav-arrow nav-arrow-right" aria-label="Destra">
                     <svg width="50" height="50" viewBox="0 0 50 50">
                         <path d="M20 10 L35 25 L20 40" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </a>
     </main>
 
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

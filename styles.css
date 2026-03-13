@@ -23,12 +23,49 @@ header {
     background: rgba(0, 0, 0, 0.3);
     color: #f0e6d2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
 header h1 {
     font-size: 2rem;
     font-weight: 300;
     letter-spacing: 2px;
+}
+
+/* Selettore lingua */
+.language-selector {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.language-selector select {
+    background: rgba(0, 0, 0, 0.5);
+    color: #f0e6d2;
+    border: 1px solid rgba(240, 230, 210, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Garamond', serif;
+    letter-spacing: 1px;
+}
+
+.language-selector select:hover {
+    background: rgba(0, 0, 0, 0.7);
+    border-color: rgba(240, 230, 210, 0.5);
+}
+
+.language-selector select:focus {
+    outline: none;
+    border-color: #f0e6d2;
+}
+
+.language-selector select option {
+    background: #2c2c2c;
+    color: #f0e6d2;
 }
 
 /* Container principale */
@@ -120,6 +157,17 @@ header h1 {
     right: 20px;
 }
 
+.nav-arrow-down {
+    bottom: 30px;
+    left: 50%;
+    top: auto;
+    transform: translateX(-50%);
+}
+
+.nav-arrow-down:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
 .nav-arrow svg {
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
@@ -127,9 +175,20 @@ header h1 {
 /* Pagine galleria */
 .gallery-page {
     background: linear-gradient(135deg, #8b7355 0%, #6b5d52 100%);
-    background-image: url('assets/muro.png');
-    background-size: cover;
+    background-image: url('assets/muro.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
+/* Sfondo specifico per pagina1 (7 pannelli) */
+.gallery-page.page-1 {
+    background-image: url('assets/muro.jpg');
+}
+
+/* Sfondo specifico per pagina2 (5 pannelli) */
+.gallery-page.page-2 {
+    background-image: url('assets/muro-ribaltato.jpg');
 }
 
 .gallery-container {
@@ -195,7 +254,7 @@ header h1 {
 }
 
 .painting {
-    background: #dad3cb;
+    background: #e8dcc4;
     padding: 0;
     border: 3px solid #dad3cb;
     box-shadow: 
@@ -457,7 +516,11 @@ header h1 {
     max-width: 1800px;
     height: 85vh;
     max-height: 900px;
-    background: #e8dcc4;
+    background-color: #d0c8b8;
+    background-image: url('assets/imgi_1_rough-beige-paper-texture.jpg'); /* Cambia qui il file se vuoi un altro sfondo */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     border: 8px solid #8b7355;
     box-shadow: 
         0 0 50px rgba(0, 0, 0, 0.8),

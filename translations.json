@@ -1,0 +1,410 @@
+{
+  "ita": {
+    "header": {
+      "title": "Tanti Nomi, Un Solo Mare",
+      "galleryTitle": "Mostra INA - Galleria"
+    },
+    "audio": {
+      "clickToActivate": "Clicca per attivare l'audio delle onde",
+      "activated": "🔊 Audio attivato"
+    },
+    "navigation": {
+      "left": "Sinistra",
+      "right": "Destra",
+      "opposite": "Di fronte"
+    },
+    "pagina1": {
+      "paintings": {
+        "mare1": {
+          "title": "Mare I",
+          "year": "1887",
+          "hoverTitle": "Lessico marino e acquatico del Decameron",
+          "description": "Nel Decameron, il lessico del paesaggio marino e acquatico rivela una straordinaria ricchezza e una forte consapevolezza linguistica. Boccaccio utilizza il mare e i corsi d'acqua non come semplici sfondi descrittivi, ma come spazi narrativi attivi, capaci di orientare il senso delle novelle e di modellare l'esperienza dei personaggi.",
+          "fullText": "<p><em>a cura di Claudia Palmieri</em></p><p>Nel Decameron, il lessico del paesaggio marino e acquatico rivela una straordinaria ricchezza e una forte consapevolezza linguistica. Boccaccio utilizza il mare e i corsi d'acqua non come semplici sfondi descrittivi, ma come <strong>spazi narrativi attivi</strong>, capaci di orientare il senso delle novelle e di modellare l'esperienza dei personaggi.</p><h3>1. Il mare come spazio narrativo</h3><p>Il mare è uno dei luoghi più dinamici dell'immaginario boccacciano:</p><ul><li>è teatro di viaggi, avventure, naufragi, scorrerie;</li><li>rappresenta instabilità, rischio, trasformazione;</li><li>segna passaggi decisivi nelle biografie dei personaggi.</li></ul><p>Il lessico marino è ampio e preciso: <em>mare, arena, scogli, seni, pelago, pelaghetto, isola, marina, piaggia, lito, costa</em>.<br>Ogni termine porta con sé una sfumatura semantica specifica.</p><h3>2. Le parole della costa</h3><p>Boccaccio distingue con cura le diverse zone di confine tra terra e mare:</p><ul><li><strong>costa:</strong> tratto roccioso e scosceso (es. costiera amalfitana);</li><li><strong>lito:</strong> striscia di riva accessibile, luogo di approdo;</li><li><strong>piaggia:</strong> spiaggia che degrada verso il mare;</li><li><strong>marina:</strong> sia tratto di mare vicino alla costa, sia la costa stessa.</li></ul><h4>La locuzione \"marina marina\"</h4><p>È uno dei casi più interessanti dell'intero intervento:</p><ul><li>costruzione per duplicazione del sostantivo;</li><li>significa \"navigare lungo la costa\";</li><li>attestata nei dialetti meridionali estremi (soprattutto Sicilia);</li><li>ha origine nella documentazione greca medievale;</li><li>registrata già nella prima Crusca come avverbio.</li></ul><p>È un esempio emblematico di contatto linguistico mediterraneo.</p><h3>3. Corsi d'acqua e diminutivi</h3><p>Accanto al mare, Boccaccio impiega un lessico vario per i corsi d'acqua: <em>fiume, fiumicello, rivo, ruscelletto</em>.<br>I diminutivi (<em>-etto, -ello</em>) hanno spesso valore vezzeggiativo, ma possono assumere anche sfumature figurate o morali.</p><h4>Il caso del \"ruscelletto\"</h4><p>Nella novella della vedova dello scolare, la frase:</p><p><em>\"Non rimproverare al mare l'averlo fatto crescere il piccolo ruscelletto\"</em></p><p>mostra come il paesaggio acquatico diventi immagine morale:</p><ul><li>il mare rappresenta ciò che è grande e potente;</li><li>il ruscelletto ciò che è piccolo ma capace di provocare effetti significativi.</li></ul><p>È un raro esempio di sentenza figurata basata su elementi naturali.</p><h3>4. Funzione narrativa e simbolica</h3><p>Il paesaggio acquatico nel Decameron:</p><ul><li>orienta la lettura;</li><li>costruisce tensioni narrative;</li><li>definisce rapporti di forza;</li><li>crea atmosfere e scenari;</li><li>riflette la cultura mediterranea del tempo.</li></ul><p>Il lessico marino e fluviale è quindi uno strumento essenziale per comprendere la poetica boccacciana e la sua capacità di trasformare lo spazio naturale in linguaggio narrativo.</p>"
+        },
+        "mare2": {
+          "title": "Mare II",
+          "year": "1892",
+          "hoverTitle": "Titolo Placeholder",
+          "description": "Placeholder descrizione opera 2. Inserisci qui il testo specifico per questa opera."
+        },
+        "mare3": {
+          "title": "Mare III",
+          "year": "1898",
+          "hoverTitle": "Titolo Placeholder",
+          "description": "Placeholder descrizione opera 3. Inserisci qui il testo specifico per questa opera."
+        },
+        "mare4": {
+          "title": "Mare IV",
+          "year": "1905",
+          "hoverTitle": "Titolo Placeholder",
+          "description": "Placeholder descrizione opera 4. Inserisci qui il testo specifico per questa opera."
+        },
+        "mare5": {
+          "title": "Mare V",
+          "year": "1912",
+          "hoverTitle": "Titolo Placeholder",
+          "description": "Placeholder descrizione opera 5. Inserisci qui il testo specifico per questa opera."
+        },
+        "mare6": {
+          "title": "Mare VI",
+          "year": "1920",
+          "hoverTitle": "Titolo Placeholder",
+          "description": "Placeholder descrizione opera 6. Inserisci qui il testo specifico per questa opera."
+        },
+        "mare7": {
+          "title": "Mare VII",
+          "year": "1925",
+          "hoverTitle": "Titolo Placeholder",
+          "description": "Placeholder descrizione opera 7. Inserisci qui il testo specifico per questa opera."
+        }
+      }
+    },
+    "pagina2": {
+      "paintings": {
+        "oceano1": {
+          "title": "Oceano I",
+          "year": "1930",
+          "hoverTitle": "Titolo Placeholder",
+          "description": "Placeholder descrizione opera 1. Inserisci qui il testo specifico per questa opera."
+        },
+        "oceano2": {
+          "title": "Oceano II",
+          "year": "1935",
+          "hoverTitle": "Titolo Placeholder",
+          "description": "Placeholder descrizione opera 2. Inserisci qui il testo specifico per questa opera."
+        },
+        "oceano3": {
+          "title": "Oceano III",
+          "year": "1940",
+          "hoverTitle": "Titolo Placeholder",
+          "description": "Placeholder descrizione opera 3. Inserisci qui il testo specifico per questa opera."
+        },
+        "oceano4": {
+          "title": "Oceano IV",
+          "year": "1945",
+          "hoverTitle": "Titolo Placeholder",
+          "description": "Placeholder descrizione opera 4. Inserisci qui il testo specifico per questa opera."
+        },
+        "oceano5": {
+          "title": "Oceano V",
+          "year": "1950",
+          "hoverTitle": "Titolo Placeholder",
+          "description": "Placeholder descrizione opera 5. Inserisci qui il testo specifico per questa opera."
+        }
+      }
+    },
+    "pagina3": {
+      "paintings": {
+        "lago1": {
+          "title": "Lago I",
+          "year": "1955",
+          "hoverTitle": "Titolo Placeholder",
+          "description": "Placeholder descrizione opera 1. Inserisci qui il testo specifico per questa opera."
+        },
+        "lago2": {
+          "title": "Lago II",
+          "year": "1960",
+          "hoverTitle": "Titolo Placeholder",
+          "description": "Placeholder descrizione opera 2. Inserisci qui il testo specifico per questa opera."
+        },
+        "lago3": {
+          "title": "Lago III",
+          "year": "1965",
+          "hoverTitle": "Titolo Placeholder",
+          "description": "Placeholder descrizione opera 3. Inserisci qui il testo specifico per questa opera."
+        },
+        "lago4": {
+          "title": "Lago IV",
+          "year": "1970",
+          "hoverTitle": "Titolo Placeholder",
+          "description": "Placeholder descrizione opera 4. Inserisci qui il testo specifico per questa opera."
+        },
+        "lago5": {
+          "title": "Lago V",
+          "year": "1975",
+          "hoverTitle": "Titolo Placeholder",
+          "description": "Placeholder descrizione opera 5. Inserisci qui il testo specifico per questa opera."
+        },
+        "lago6": {
+          "title": "Lago VI",
+          "year": "1980",
+          "hoverTitle": "Titolo Placeholder",
+          "description": "Placeholder descrizione opera 6. Inserisci qui il testo specifico per questa opera."
+        }
+      }
+    }
+  },
+  "eng": {
+    "header": {
+      "title": "Many Names, One Sea",
+      "galleryTitle": "INA Exhibition - Gallery"
+    },
+    "audio": {
+      "clickToActivate": "Click to activate wave sounds",
+      "activated": "🔊 Audio activated"
+    },
+    "navigation": {
+      "left": "Left",
+      "right": "Right",
+      "opposite": "Opposite"
+    },
+    "pagina1": {
+      "paintings": {
+        "mare1": {
+          "title": "Sea I",
+          "year": "1887",
+          "hoverTitle": "[EN] Marine and aquatic lexicon of the Decameron",
+          "description": "[EN] Placeholder description. Insert here the specific text for this work.",
+          "fullText": "[EN] Full text translation here"
+        },
+        "mare2": {
+          "title": "Sea II",
+          "year": "1892",
+          "hoverTitle": "[EN] Placeholder Title",
+          "description": "[EN] Placeholder description. Insert here the specific text for this work."
+        },
+        "mare3": {
+          "title": "Sea III",
+          "year": "1898",
+          "hoverTitle": "[EN] Placeholder Title",
+          "description": "[EN] Placeholder description. Insert here the specific text for this work."
+        },
+        "mare4": {
+          "title": "Sea IV",
+          "year": "1905",
+          "hoverTitle": "[EN] Placeholder Title",
+          "description": "[EN] Placeholder description. Insert here the specific text for this work."
+        },
+        "mare5": {
+          "title": "Sea V",
+          "year": "1912",
+          "hoverTitle": "[EN] Placeholder Title",
+          "description": "[EN] Placeholder description. Insert here the specific text for this work."
+        },
+        "mare6": {
+          "title": "Sea VI",
+          "year": "1920",
+          "hoverTitle": "[EN] Placeholder Title",
+          "description": "[EN] Placeholder description. Insert here the specific text for this work."
+        },
+        "mare7": {
+          "title": "Sea VII",
+          "year": "1925",
+          "hoverTitle": "[EN] Placeholder Title",
+          "description": "[EN] Placeholder description. Insert here the specific text for this work."
+        }
+      }
+    },
+    "pagina2": {
+      "paintings": {
+        "oceano1": {
+          "title": "Ocean I",
+          "year": "1930",
+          "hoverTitle": "[EN] Placeholder Title",
+          "description": "[EN] Placeholder description. Insert here the specific text for this work."
+        },
+        "oceano2": {
+          "title": "Ocean II",
+          "year": "1935",
+          "hoverTitle": "[EN] Placeholder Title",
+          "description": "[EN] Placeholder description. Insert here the specific text for this work."
+        },
+        "oceano3": {
+          "title": "Ocean III",
+          "year": "1940",
+          "hoverTitle": "[EN] Placeholder Title",
+          "description": "[EN] Placeholder description. Insert here the specific text for this work."
+        },
+        "oceano4": {
+          "title": "Ocean IV",
+          "year": "1945",
+          "hoverTitle": "[EN] Placeholder Title",
+          "description": "[EN] Placeholder description. Insert here the specific text for this work."
+        },
+        "oceano5": {
+          "title": "Ocean V",
+          "year": "1950",
+          "hoverTitle": "[EN] Placeholder Title",
+          "description": "[EN] Placeholder description. Insert here the specific text for this work."
+        }
+      }
+    },
+    "pagina3": {
+      "paintings": {
+        "lago1": {
+          "title": "Lake I",
+          "year": "1955",
+          "hoverTitle": "[EN] Placeholder Title",
+          "description": "[EN] Placeholder description. Insert here the specific text for this work."
+        },
+        "lago2": {
+          "title": "Lake II",
+          "year": "1960",
+          "hoverTitle": "[EN] Placeholder Title",
+          "description": "[EN] Placeholder description. Insert here the specific text for this work."
+        },
+        "lago3": {
+          "title": "Lake III",
+          "year": "1965",
+          "hoverTitle": "[EN] Placeholder Title",
+          "description": "[EN] Placeholder description. Insert here the specific text for this work."
+        },
+        "lago4": {
+          "title": "Lake IV",
+          "year": "1970",
+          "hoverTitle": "[EN] Placeholder Title",
+          "description": "[EN] Placeholder description. Insert here the specific text for this work."
+        },
+        "lago5": {
+          "title": "Lake V",
+          "year": "1975",
+          "hoverTitle": "[EN] Placeholder Title",
+          "description": "[EN] Placeholder description. Insert here the specific text for this work."
+        },
+        "lago6": {
+          "title": "Lake VI",
+          "year": "1980",
+          "hoverTitle": "[EN] Placeholder Title",
+          "description": "[EN] Placeholder description. Insert here the specific text for this work."
+        }
+      }
+    }
+  },
+  "cz": {
+    "header": {
+      "title": "[CZ] Mnoho jmen, jedno moře",
+      "galleryTitle": "[CZ] Výstava INA - Galerie"
+    },
+    "audio": {
+      "clickToActivate": "[CZ] Kliknutím aktivujete zvuk vln",
+      "activated": "[CZ] 🔊 Zvuk aktivován"
+    },
+    "navigation": {
+      "left": "[CZ] Vlevo",
+      "right": "[CZ] Vpravo",
+      "opposite": "[CZ] Naproti"
+    },
+    "pagina1": {
+      "paintings": {
+        "mare1": {
+          "title": "[CZ] Moře I",
+          "year": "1887",
+          "hoverTitle": "[CZ] Mořské a vodní slovníky Dekameronu",
+          "description": "[CZ] Text placeholder. Zde vložte konkrétní text pro toto dílo.",
+          "fullText": "[CZ] Full text translation here"
+        },
+        "mare2": {
+          "title": "[CZ] Moře II",
+          "year": "1892",
+          "hoverTitle": "[CZ] Placeholder Title",
+          "description": "[CZ] Text placeholder. Zde vložte konkrétní text pro toto dílo."
+        },
+        "mare3": {
+          "title": "[CZ] Moře III",
+          "year": "1898",
+          "hoverTitle": "[CZ] Placeholder Title",
+          "description": "[CZ] Text placeholder. Zde vložte konkrétní text pro toto dílo."
+        },
+        "mare4": {
+          "title": "[CZ] Moře IV",
+          "year": "1905",
+          "hoverTitle": "[CZ] Placeholder Title",
+          "description": "[CZ] Text placeholder. Zde vložte konkrétní text pro toto dílo."
+        },
+        "mare5": {
+          "title": "[CZ] Moře V",
+          "year": "1912",
+          "hoverTitle": "[CZ] Placeholder Title",
+          "description": "[CZ] Text placeholder. Zde vložte konkrétní text pro toto dílo."
+        },
+        "mare6": {
+          "title": "[CZ] Moře VI",
+          "year": "1920",
+          "hoverTitle": "[CZ] Placeholder Title",
+          "description": "[CZ] Text placeholder. Zde vložte konkrétní text pro toto dílo."
+        },
+        "mare7": {
+          "title": "[CZ] Moře VII",
+          "year": "1925",
+          "hoverTitle": "[CZ] Placeholder Title",
+          "description": "[CZ] Text placeholder. Zde vložte konkrétní text pro toto dílo."
+        }
+      }
+    },
+    "pagina2": {
+      "paintings": {
+        "oceano1": {
+          "title": "[CZ] Oceán I",
+          "year": "1930",
+          "hoverTitle": "[CZ] Placeholder Title",
+          "description": "[CZ] Text placeholder. Zde vložte konkrétní text pro toto dílo."
+        },
+        "oceano2": {
+          "title": "[CZ] Oceán II",
+          "year": "1935",
+          "hoverTitle": "[CZ] Placeholder Title",
+          "description": "[CZ] Text placeholder. Zde vložte konkrétní text pro toto dílo."
+        },
+        "oceano3": {
+          "title": "[CZ] Oceán III",
+          "year": "1940",
+          "hoverTitle": "[CZ] Placeholder Title",
+          "description": "[CZ] Text placeholder. Zde vložte konkrétní text pro toto dílo."
+        },
+        "oceano4": {
+          "title": "[CZ] Oceán IV",
+          "year": "1945",
+          "hoverTitle": "[CZ] Placeholder Title",
+          "description": "[CZ] Text placeholder. Zde vložte konkrétní text pro toto dílo."
+        },
+        "oceano5": {
+          "title": "[CZ] Oceán V",
+          "year": "1950",
+          "hoverTitle": "[CZ] Placeholder Title",
+          "description": "[CZ] Text placeholder. Zde vložte konkrétní text pro toto dílo."
+        }
+      }
+    },
+    "pagina3": {
+      "paintings": {
+        "lago1": {
+          "title": "[CZ] Jezero I",
+          "year": "1955",
+          "hoverTitle": "[CZ] Placeholder Title",
+          "description": "[CZ] Text placeholder. Zde vložte konkrétní text pro toto dílo."
+        },
+        "lago2": {
+          "title": "[CZ] Jezero II",
+          "year": "1960",
+          "hoverTitle": "[CZ] Placeholder Title",
+          "description": "[CZ] Text placeholder. Zde vložte konkrétní text pro toto dílo."
+        },
+        "lago3": {
+          "title": "[CZ] Jezero III",
+          "year": "1965",
+          "hoverTitle": "[CZ] Placeholder Title",
+          "description": "[CZ] Text placeholder. Zde vložte konkrétní text pro toto dílo."
+        },
+        "lago4": {
+          "title": "[CZ] Jezero IV",
+          "year": "1970",
+          "hoverTitle": "[CZ] Placeholder Title",
+          "description": "[CZ] Text placeholder. Zde vložte konkrétní text pro toto dílo."
+        },
+        "lago5": {
+          "title": "[CZ] Jezero V",
+          "year": "1975",
+          "hoverTitle": "[CZ] Placeholder Title",
+          "description": "[CZ] Text placeholder. Zde vložte konkrétní text pro toto dílo."
+        },
+        "lago6": {
+          "title": "[CZ] Jezero VI",
+          "year": "1980",
+          "hoverTitle": "[CZ] Placeholder Title",
+          "description": "[CZ] Text placeholder. Zde vložte konkrétní text pro toto dílo."
+        }
+      }
+    }
+  }
+}
