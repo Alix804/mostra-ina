@@ -17,9 +17,23 @@
             </select>
         </div>
     </header>
-
-    <main class="gallery-container gallery-row">
-        <div class="painting-frame">
+            <!-- Overlay zoom quadri -->
+            <div id="zoom-overlay" style="display:none;">
+                <button id="close-zoom" aria-label="Chiudi zoom" style="position:absolute;top:20px;right:30px;z-index:10;font-size:2rem;background:none;border:none;color:#fff;cursor:pointer;">&times;</button>
+                <div class="zoom-gallery-row">
+                    <!-- Quadri zoomati, uno accanto all'altro -->
+                    <div class="zoom-painting-frame quadro1" data-index="0"><img src="assets/Decamerone.jpeg" alt="Decamerone"></div>
+                    <div class="zoom-painting-frame quadro2" data-index="1"><img src="assets/quadro2.jpg" alt="Opera 2"></div>
+                    <div class="zoom-painting-frame quadro3" data-index="2"><img src="assets/quadro2.jpg" alt="Opera 3"></div>
+                    <div class="zoom-painting-frame quadro4" data-index="3"><img src="assets/quadro1.jpg" alt="Opera 4"></div>
+                    <div class="zoom-painting-frame quadro5" data-index="4"><img src="assets/quadro1.jpg" alt="Opera 5"></div>
+                    <div class="zoom-painting-frame quadro6" data-index="5"><img src="assets/quadro2.jpg" alt="Opera 6"></div>
+                    <div class="zoom-painting-frame quadro7" data-index="6"><img src="assets/quadro2.jpg" alt="Opera 7"></div>
+                </div>
+            </div>
+        <div class="gallery-wall-container">
+            <main class="gallery-wall">
+        <div class="painting-frame quadro1">
             <div class="painting" data-painting-index="0">
                 <img src="assets/Decamerone.jpeg" alt="Decamerone">
                 <div class="painting-hover-title" data-i18n="pagina1.paintings.mare1.hoverTitle">Lessico marino e acquatico del Decameron</div>
@@ -29,8 +43,7 @@
                 <p>1887</p>
             </div>
         </div>
-
-        <div class="painting-frame">
+        <div class="painting-frame quadro2">
             <div class="painting" data-painting-index="1">
                 <img src="assets/quadro2.jpg" alt="Opera 2">
                 <div class="painting-hover-title" data-i18n="pagina1.paintings.mare2.hoverTitle">Titolo Placeholder</div>
@@ -40,8 +53,7 @@
                 <p>1892</p>
             </div>
         </div>
-
-        <div class="painting-frame">
+        <div class="painting-frame quadro3">
             <div class="painting" data-painting-index="2">
                 <img src="assets/quadro2.jpg" alt="Opera 3">
                 <div class="painting-hover-title" data-i18n="pagina1.paintings.mare3.hoverTitle">Titolo Placeholder</div>
@@ -51,8 +63,7 @@
                 <p>1898</p>
             </div>
         </div>
-
-        <div class="painting-frame">
+        <div class="painting-frame quadro4">
             <div class="painting" data-painting-index="3">
                 <img src="assets/quadro1.jpg" alt="Opera 4">
                 <div class="painting-hover-title" data-i18n="pagina1.paintings.mare4.hoverTitle">Titolo Placeholder</div>
@@ -62,8 +73,7 @@
                 <p>1905</p>
             </div>
         </div>
-
-        <div class="painting-frame">
+        <div class="painting-frame quadro5">
             <div class="painting" data-painting-index="4">
                 <img src="assets/quadro1.jpg" alt="Opera 5">
                 <div class="painting-hover-title" data-i18n="pagina1.paintings.mare5.hoverTitle">Titolo Placeholder</div>
@@ -73,8 +83,7 @@
                 <p>1912</p>
             </div>
         </div>
-
-        <div class="painting-frame">
+        <div class="painting-frame quadro6">
             <div class="painting" data-painting-index="5">
                 <img src="assets/quadro2.jpg" alt="Opera 6">
                 <div class="painting-hover-title" data-i18n="pagina1.paintings.mare6.hoverTitle">Titolo Placeholder</div>
@@ -84,8 +93,7 @@
                 <p>1920</p>
             </div>
         </div>
-
-        <div class="painting-frame">
+        <div class="painting-frame quadro7">
             <div class="painting" data-painting-index="6">
                 <img src="assets/quadro2.jpg" alt="Opera 7">
                 <div class="painting-hover-title" data-i18n="pagina1.paintings.mare7.hoverTitle">Titolo Placeholder</div>

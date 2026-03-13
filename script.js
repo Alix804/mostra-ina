@@ -1,134 +1,43 @@
 // Gestione attivazione audio al primo click
 document.addEventListener('DOMContentLoaded', function() {
-    const video = document.querySelector('.ocean-video');
     const oceanAudio = document.getElementById('ocean-audio');
+    const audioToggle = document.getElementById('audio-toggle');
+    const audioIcon = document.getElementById('audio-icon');
     let audioEnabled = false;
 
-    // Funzione per attivare l'audio
-    function enableAudio() {
-        if (!audioEnabled) {
-            // Attiva audio del video se presente
-            if (video) {
-                video.muted = false;
-            }
-            
-            // Attiva e riproduci l'audio MP3
-            if (oceanAudio) {
-                oceanAudio.play().catch(err => {
-                    console.log('Errore riproduzione audio:', err);
-                });
-            }
-            
-            audioEnabled = true;
-            console.log('Audio delle onde attivato');
-            
-            // Rimuovi il listener dopo il primo click
-            document.removeEventListener('click', enableAudio);
-            document.removeEventListener('touchstart', enableAudio);
-            
-            // Feedback visivo opzionale
-            showAudioNotification();
+    function updateAudioIcon() {
+        if (audioEnabled) {
+            audioIcon.textContent = '🔇'; // Audio acceso, mostra icona barrata per "stacca"
+        } else {
+            audioIcon.textContent = '🔊'; // Audio spento, mostra icona normale
         }
     }
 
-    // Mostra notifica che l'audio è stato attivato
-    function showAudioNotification() {
-        const notification = document.createElement('div');
-        notification.setAttribute('data-i18n', 'audio.activated');
-        notification.textContent = '🔊 Audio attivato';
-        notification.style.cssText = `
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 4px;
-            font-size: 1rem;
-            z-index: 1000;
-            animation: fadeInOut 3s ease-in-out;
-        `;
-        
-        document.body.appendChild(notification);
-        
-        // Applica traduzione se disponibile
-        if (window.translations && window.currentLanguage) {
-            const lang = window.currentLanguage;
-            const text = window.translations[lang]?.audio?.activated || '🔊 Audio attivato';
-            notification.textContent = text;
-        }
-        
-        setTimeout(() => {
-            notification.remove();
-        }, 3000);
-    }
-
-    // Aggiungi animazione CSS per la notifica
-    if (!document.getElementById('audio-notification-style')) {
-        const style = document.createElement('style');
-        style.id = 'audio-notification-style';
-        style.textContent = `
-            @keyframes fadeInOut {
-                0% { opacity: 0; transform: translateY(-10px); }
-                20% { opacity: 1; transform: translateY(0); }
-                80% { opacity: 1; transform: translateY(0); }
-                100% { opacity: 0; transform: translateY(-10px); }
-            }
-        `;
-        document.head.appendChild(style);
-    }
-
-    // Aggiungi listener per il primo click/touch
-    if (video || oceanAudio) {
-        document.addEventListener('click', enableAudio);
-        document.addEventListener('touchstart', enableAudio);
-        
-        // Messaggio iniziale per informare l'utente
-        const initialMessage = document.createElement('div');
-        initialMessage.setAttribute('data-i18n', 'audio.clickToActivate');
-        initialMessage.textContent = 'Clicca per attivare l\'audio delle onde';
-        initialMessage.style.cssText = `
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            z-index: 1000;
-            animation: pulse 2s ease-in-out infinite;
-        `;
-        
-        document.body.appendChild(initialMessage);
-        
-        // Applica traduzione se disponibile
-        if (window.translations && window.currentLanguage) {
-            const lang = window.currentLanguage;
-            const text = window.translations[lang]?.audio?.clickToActivate || 'Clicca per attivare l\'audio delle onde';
-            initialMessage.textContent = text;
-        }
-        
-        // Rimuovi il messaggio quando l'audio viene attivato
-        document.addEventListener('click', function removeMessage() {
-            initialMessage.remove();
-            document.removeEventListener('click', removeMessage);
-        }, { once: true });
-        
-        // Aggiungi animazione pulse
-        if (!document.getElementById('pulse-animation-style')) {
-            const pulseStyle = document.createElement('style');
-            pulseStyle.id = 'pulse-animation-style';
-            pulseStyle.textContent = `
-                @keyframes pulse {
-                    0%, 100% { opacity: 0.7; }
-                    50% { opacity: 1; }
-                }
-            `;
-            document.head.appendChild(pulseStyle);
+    function toggleAudio() {
+        if (!oceanAudio) return;
+        if (audioEnabled) {
+            oceanAudio.pause();
+            oceanAudio.currentTime = 0;
+            audioEnabled = false;
+            updateAudioIcon();
+        } else {
+            oceanAudio.play().then(() => {
+                audioEnabled = true;
+                updateAudioIcon();
+            }).catch(err => {
+                // Autoplay policy: l'utente deve interagire
+                alert('Impossibile avviare l\'audio: interagisci con la pagina.');
+            });
         }
     }
 
+    if (audioToggle && oceanAudio) {
+        audioToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleAudio();
+        });
+        updateAudioIcon();
+    }
     // Gestione navigazione con tastiera (opzionale)
     document.addEventListener('keydown', function(e) {
         const currentPage = window.location.pathname.split('/').pop();

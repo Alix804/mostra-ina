@@ -17,11 +17,13 @@
             </select>
         </div>
     </header>
-
-    <main class="gallery-container gallery-row">
-        <div class="painting-frame">
+        <div class="gallery-wall-container">
+            <main class="gallery-wall">
+                        <!-- Div nascosti per mantenere altezza -->
+        <div class="painting-frame" style="visibility:hidden;"></div>
+        <div class="painting-frame quadro1">
             <div class="painting" data-painting-index="0">
-                <img src="assets/quadro1.jpg" alt="Opera 1">
+                <img src="assets/quadro1.jpg" alt="Oceano I">
                 <div class="painting-hover-title" data-i18n="pagina2.paintings.oceano1.hoverTitle">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
@@ -29,10 +31,9 @@
                 <p>1930</p>
             </div>
         </div>
-
-        <div class="painting-frame">
+        <div class="painting-frame quadro2">
             <div class="painting" data-painting-index="1">
-                <img src="assets/quadro2.jpg" alt="Opera 2">
+                <img src="assets/quadro2.jpg" alt="Oceano II">
                 <div class="painting-hover-title" data-i18n="pagina2.paintings.oceano2.hoverTitle">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
@@ -40,10 +41,9 @@
                 <p>1935</p>
             </div>
         </div>
-
-        <div class="painting-frame">
+        <div class="painting-frame quadro3">
             <div class="painting" data-painting-index="2">
-                <img src="assets/quadro1.jpg" alt="Opera 3">
+                <img src="assets/quadro1.jpg" alt="Oceano III">
                 <div class="painting-hover-title" data-i18n="pagina2.paintings.oceano3.hoverTitle">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
@@ -51,10 +51,9 @@
                 <p>1940</p>
             </div>
         </div>
-
-        <div class="painting-frame">
+        <div class="painting-frame quadro4">
             <div class="painting" data-painting-index="3">
-                <img src="assets/quadro2.jpg" alt="Opera 4">
+                <img src="assets/quadro2.jpg" alt="Oceano IV">
                 <div class="painting-hover-title" data-i18n="pagina2.paintings.oceano4.hoverTitle">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
@@ -62,10 +61,9 @@
                 <p>1945</p>
             </div>
         </div>
-
-        <div class="painting-frame">
+        <div class="painting-frame quadro5">
             <div class="painting" data-painting-index="4">
-                <img src="assets/quadro1.jpg" alt="Opera 5">
+                <img src="assets/quadro1.jpg" alt="Oceano V">
                 <div class="painting-hover-title" data-i18n="pagina2.paintings.oceano5.hoverTitle">Titolo Placeholder</div>
             </div>
             <div class="museum-label">
@@ -73,6 +71,173 @@
                 <p>1950</p>
             </div>
         </div>
+
+        <!-- Div nascosti per mantenere altezza -->
+        <div class="painting-frame" style="visibility:hidden;"></div>
+
+        <!-- Frecce di navigazione -->
+        <a href="pagine3.html" class="nav-arrow nav-arrow-left" aria-label="Sinistra">
+            <svg width="50" height="50" viewBox="0 0 50 50">
+                <path d="M30 10 L15 25 L30 40" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <a href="pagina1.html" class="nav-arrow nav-arrow-down" aria-label="Di fronte">
+            <svg width="50" height="50" viewBox="0 0 50 50">
+                <path d="M10 20 L25 35 L40 20" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+        <a href="pagine3.html" class="nav-arrow nav-arrow-right" aria-label="Destra">
+            <svg width="50" height="50" viewBox="0 0 50 50">
+                <path d="M20 10 L35 25 L20 40" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </main>
+
+    <!-- Modale dettaglio opera -->
+    <div id="painting-modal" class="modal-overlay">
+        <button class="modal-close">&times;</button>
+        
+        <!-- Barra miniature -->
+        <div class="modal-thumbnails">
+            <div class="thumbnail-item" data-index="0" data-title="Mare I"></div>
+            <div class="thumbnail-item" data-index="1" data-title="Mare II"></div>
+            <div class="thumbnail-item" data-index="2" data-title="Mare III"></div>
+            <div class="thumbnail-item" data-index="3" data-title="Mare IV"></div>
+            <div class="thumbnail-item" data-index="4" data-title="Mare V"></div>
+            <div class="thumbnail-item" data-index="5" data-title="Mare VI"></div>
+            <div class="thumbnail-item" data-index="6" data-title="Mare VII"></div>
+            <div class="thumbnail-tooltip"></div>
+        </div>
+
+        <!-- Contenitore principale -->
+        <div class="modal-container">
+            <!-- Dettagli per opera 1 -->
+            <div class="painting-detail" data-index="0">
+                <div class="painting-info" data-i18n-html="pagina1.paintings.mare1.fullText">
+                    <h2>Lessico marino e acquatico nel Decameron</h2>
+                    <p><em>a cura di Claudia Palmieri</em></p>
+                    
+                    <p>Nel Decameron, il lessico del paesaggio marino e acquatico rivela una straordinaria ricchezza e una forte consapevolezza linguistica. Boccaccio utilizza il mare e i corsi d'acqua non come semplici sfondi descrittivi, ma come <strong>spazi narrativi attivi</strong>, capaci di orientare il senso delle novelle e di modellare l'esperienza dei personaggi.</p>
+
+                    <h3>1. Il mare come spazio narrativo</h3>
+                    <p>Il mare  uno dei luoghi pi dinamici dell'immaginario boccacciano:</p>
+                    <ul>
+                        <li> teatro di viaggi, avventure, naufragi, scorrerie;</li>
+                        <li>rappresenta instabilit, rischio, trasformazione;</li>
+                        <li>segna passaggi decisivi nelle biografie dei personaggi.</li>
+                    </ul>
+                    <p>Il lessico marino  ampio e preciso: <em>mare, arena, scogli, seni, pelago, pelaghetto, isola, marina, piaggia, lito, costa</em>.<br>
+                    Ogni termine porta con s una sfumatura semantica specifica.</p>
+
+                    <h3>2. Le parole della costa</h3>
+                    <p>Boccaccio distingue con cura le diverse zone di confine tra terra e mare:</p>
+                    <ul>
+                        <li><strong>costa:</strong> tratto roccioso e scosceso (es. costiera amalfitana);</li>
+                        <li><strong>lito:</strong> striscia di riva accessibile, luogo di approdo;</li>
+                        <li><strong>piaggia:</strong> spiaggia che degrada verso il mare;</li>
+                        <li><strong>marina:</strong> sia tratto di mare vicino alla costa, sia la costa stessa.</li>
+                    </ul>
+                    
+                    <h4>La locuzione "marina marina"</h4>
+                    <p> uno dei casi pi interessanti dell'intero intervento:</p>
+                    <ul>
+                        <li>costruzione per duplicazione del sostantivo;</li>
+                        <li>significa "navigare lungo la costa";</li>
+                        <li>attestata nei dialetti meridionali estremi (soprattutto Sicilia);</li>
+                        <li>ha origine nella documentazione greca medievale;</li>
+                        <li>registrata gi nella prima Crusca come avverbio.</li>
+                    </ul>
+                    <p> un esempio emblematico di contatto linguistico mediterraneo.</p>
+
+                    <h3>3. Corsi d'acqua e diminutivi</h3>
+                    <p>Accanto al mare, Boccaccio impiega un lessico vario per i corsi d'acqua: <em>fiume, fiumicello, rivo, ruscelletto</em>.<br>
+                    I diminutivi (<em>-etto, -ello</em>) hanno spesso valore vezzeggiativo, ma possono assumere anche sfumature figurate o morali.</p>
+                    
+                    <h4>Il caso del "ruscelletto"</h4>
+                    <p>Nella novella della vedova dello scolare, la frase:</p>
+                    <p><em>"Non rimproverare al mare l'averlo fatto crescere il piccolo ruscelletto"</em></p>
+                    <p>mostra come il paesaggio acquatico diventi immagine morale:</p>
+                    <ul>
+                        <li>il mare rappresenta ci che  grande e potente;</li>
+                        <li>il ruscelletto ci che  piccolo ma capace di provocare effetti significativi.</li>
+                    </ul>
+                    <p> un raro esempio di sentenza figurata basata su elementi naturali.</p>
+
+                    <h3>4. Funzione narrativa e simbolica</h3>
+                    <p>Il paesaggio acquatico nel Decameron:</p>
+                    <ul>
+                        <li>orienta la lettura;</li>
+                        <li>costruisce tensioni narrative;</li>
+                        <li>definisce rapporti di forza;</li>
+                        <li>crea atmosfere e scenari;</li>
+                        <li>riflette la cultura mediterranea del tempo.</li>
+                    </ul>
+                    <p>Il lessico marino e fluviale  quindi uno strumento essenziale per comprendere la poetica boccacciana e la sua capacit di trasformare lo spazio naturale in linguaggio narrativo.</p>
+                </div>
+                <img src="assets/Decamerone.jpeg" alt="Mare I" class="painting-bottom-image">
+            </div>
+
+            <!-- Dettagli per opera 2 -->
+            <div class="painting-detail" data-index="1">
+                <img src="assets/quadro2.jpg" alt="Mare II">
+                <div class="painting-info">
+                    <h2 data-i18n="pagina1.paintings.mare2.title">Mare II</h2>
+                    <p data-i18n="pagina1.paintings.mare2.description">Placeholder descrizione opera 2. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 3 -->
+            <div class="painting-detail" data-index="2">
+                <img src="assets/quadro2.jpg" alt="Mare III">
+                <div class="painting-info">
+                    <h2 data-i18n="pagina1.paintings.mare3.title">Mare III</h2>
+                    <p data-i18n="pagina1.paintings.mare3.description">Placeholder descrizione opera 3. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 4 -->
+            <div class="painting-detail" data-index="3">
+                <img src="assets/quadro1.jpg" alt="Mare IV">
+                <div class="painting-info">
+                    <h2 data-i18n="pagina1.paintings.mare4.title">Mare IV</h2>
+                    <p data-i18n="pagina1.paintings.mare4.description">Placeholder descrizione opera 4. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 5 -->
+            <div class="painting-detail" data-index="4">
+                <img src="assets/quadro1.jpg" alt="Mare V">
+                <div class="painting-info">
+                    <h2 data-i18n="pagina1.paintings.mare5.title">Mare V</h2>
+                    <p data-i18n="pagina1.paintings.mare5.description">Placeholder descrizione opera 5. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 6 -->
+            <div class="painting-detail" data-index="5">
+                <img src="assets/quadro2.jpg" alt="Mare VI">
+                <div class="painting-info">
+                    <h2 data-i18n="pagina1.paintings.mare6.title">Mare VI</h2>
+                    <p data-i18n="pagina1.paintings.mare6.description">Placeholder descrizione opera 6. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+
+            <!-- Dettagli per opera 7 -->
+            <div class="painting-detail" data-index="6">
+                <img src="assets/quadro2.jpg" alt="Mare VII">
+                <div class="painting-info">
+                    <h2 data-i18n="pagina1.paintings.mare7.title">Mare VII</h2>
+                    <p data-i18n="pagina1.paintings.mare7.description">Placeholder descrizione opera 7. Inserisci qui il testo specifico per questa opera.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
 
         <!-- Frecce di navigazione -->
         <a href="index.html" class="nav-arrow nav-arrow-left" aria-label="Sinistra">

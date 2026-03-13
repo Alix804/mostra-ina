@@ -1,3 +1,124 @@
+/* Overlay zoom quadri */
+#zoom-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('assets/sfondo-modale.jpg') center center/cover no-repeat;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 90px; /* spazio per header */
+}
+
+.zoom-gallery-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    width: 96vw;
+    height: 60vh;
+    gap: 1vw;
+    margin: 0 auto;
+}
+
+.zoom-painting-frame {
+    flex: 1 1 0;
+    max-width: 16vw;
+    min-width: 120px;
+    max-height: 90%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.zoom-painting-frame img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/4;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    background: #fff;
+}
+.zoom-painting-frame:hover {
+    transform: scale(1.04);
+    z-index: 2;
+}
+#close-zoom {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 10;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    text-shadow: 0 2px 8px #000;
+}
+.gallery-wall-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 3vw auto 0 auto;
+    padding-left: 7vw;
+    padding-right: 7vw;
+    box-sizing: border-box;
+}
+
+.gallery-wall {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 220px;
+    background: none;
+    gap:10px;
+}
+.gallery-wall .painting-frame {
+    flex: 1 1 0;
+    min-width: 120px;
+    max-width: 220px;
+    max-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    margin: 0;
+    position: static;
+}
+.gallery-wall .painting {
+    width: 100%;
+    aspect-ratio: 3/4;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallery-wall .painting img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+}
+.gallery-wall .museum-label {
+    width: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+    margin-top: 0.2vw;
+    background: rgba(255,255,255,0.85);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 0.2vw 0.1vw;
+}
 html, body {
     height: 100vh;
     overflow: hidden;
@@ -242,20 +363,21 @@ header h1 {
 }
 
 /* Layout orizzontale per 7 quadri */
-.gallery-row {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 0.3rem;
-    padding: 3rem 0.2rem 0.5rem 0.2rem;
-    max-width: 100%;
-    width: 100%;
-    overflow-x: hidden;
-}
-
-.gallery-row .painting-frame {
+/* Gallery wall: 7 quadri centrati, gap 10px, padding laterale 7vw, margin-top 2vw */
+.gallery-wall .painting-frame {
     flex: 1 1 0;
-    min-width: 0;
+    min-width: 120px;
+    max-width: 220px;
+    height: 18vw;
+    min-height: 180px;
+    max-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    margin: 0;
+    position: static;
 }
 
 .gallery-row .painting {
