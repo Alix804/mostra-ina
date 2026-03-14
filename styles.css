@@ -1,72 +1,22 @@
-/* Overlay zoom quadri */
-#zoom-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url('assets/sfondo-modale.jpg') center center/cover no-repeat;
-    z-index: 2000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 90px; /* spazio per header */
-}
-
-.zoom-gallery-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    width: 96vw;
-    height: 60vh;
-    gap: 1vw;
-    margin: 0 auto;
-}
-
-.zoom-painting-frame {
-    flex: 1 1 0;
-    max-width: 16vw;
-    min-width: 120px;
-    max-height: 90%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-.zoom-painting-frame img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 3/4;
-    border-radius: 10px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-    background: #fff;
-}
-.zoom-painting-frame:hover {
-    transform: scale(1.04);
-    z-index: 2;
-}
-#close-zoom {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    z-index: 10;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    text-shadow: 0 2px 8px #000;
-}
 .gallery-wall-container {
     width: 100%;
     max-width: 1400px;
     margin: 3vw auto 0 auto;
-    padding-left: 7vw;
-    padding-right: 7vw;
     box-sizing: border-box;
+}
+
+/* Padding personalizzato per ogni pagina */
+.page-1 .gallery-wall-container {
+    padding-left: 6vw;
+    padding-right: 10vw;
+}
+.page-2 .gallery-wall-container {
+    padding-left: 10vw;
+    padding-right: 6vw;
+}
+.page-3 .gallery-wall-container {
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 .gallery-wall {
@@ -78,13 +28,11 @@
     margin: 0 auto;
     min-height: 220px;
     background: none;
-    gap:10px;
+    gap:5px;
 }
 .gallery-wall .painting-frame {
-    flex: 1 1 0;
-    min-width: 120px;
-    max-width: 220px;
-    max-height: 320px;
+    width: 3vw;
+    aspect-ratio: 3/4;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,14 +41,6 @@
     margin: 0;
     position: static;
 }
-.gallery-wall .painting {
-    width: 100%;
-    aspect-ratio: 3/4;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .gallery-wall .painting img {
     width: 100%;
     height: auto;
@@ -108,16 +48,19 @@
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+    max-width: none;
 }
 .gallery-wall .museum-label {
-    width: 100%;
+    width: 20%;
+    height:20px;
     text-align: center;
     font-size: 0.75rem;
     margin-top: 0.2vw;
     background: rgba(255,255,255,0.85);
-    border-radius: 0 0 8px 8px;
+    border-radius: 2px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     padding: 0.2vw 0.1vw;
+    align-self: flex-end;
 }
 html, body {
     height: 100vh;
@@ -363,14 +306,9 @@ header h1 {
 }
 
 /* Layout orizzontale per 7 quadri */
-/* Gallery wall: 7 quadri centrati, gap 10px, padding laterale 7vw, margin-top 2vw */
 .gallery-wall .painting-frame {
-    flex: 1 1 0;
-    min-width: 120px;
-    max-width: 220px;
-    height: 18vw;
-    min-height: 180px;
-    max-height: 320px;
+    width: 8vw;
+    aspect-ratio: 3/4;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -395,16 +333,6 @@ header h1 {
     padding: 0.4rem 0.6rem;
     font-size: 0.8rem;
     max-width: 100%;
-}
-
-.gallery-row .museum-label h3 {
-    font-size: 0.9rem;
-    margin-bottom: 0.2rem;
-}
-
-.gallery-row .museum-label p {
-    font-size: 0.75rem;
-    line-height: 1.3;
 }
 
 /* Cornice quadro */
@@ -432,7 +360,7 @@ header h1 {
     left: 0.5rem;
     right: 0.5rem;
     bottom: 0.5rem;
-    border: 1px solid #dad3cb;
+    border: 0px solid #dad3cb;
     pointer-events: none;
 }
 
@@ -481,20 +409,7 @@ header h1 {
     max-width: 350px;
     font-size: 0.9rem;
     color: #2c2416;
-}
 
-.museum-label h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: #1a1410;
-    border-bottom: 1px solid #d0c8b8;
-    padding-bottom: 0.3rem;
-}
-
-.museum-label p {
-    line-height: 1.6;
-    font-family: 'Times New Roman', serif;
 }
 
 /* Pulsanti di navigazione galleria */
@@ -795,7 +710,6 @@ header h1 {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     border: 4px solid #dad3cb;
 }
-
 /* Responsive modale */
 @media (max-width: 768px) {
     .modal-container {
