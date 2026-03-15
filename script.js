@@ -163,20 +163,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // --- FLIP quadro1 ---
-    const quadro1 = document.querySelector('.painting-frame.quadro1');
-    const flipBtn = quadro1 ? quadro1.querySelector('.flip-btn') : null;
-    if (flipBtn && quadro1) {
-        flipBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            quadro1.classList.toggle('flipped');
-        });
-    }
-
-    // Flip automatico: torna al fronte quando il mouse esce dal quadro1
-    if (quadro1) {
-        quadro1.addEventListener('mouseleave', function() {
-            quadro1.classList.remove('flipped');
-        });
-    }
+    // --- FLIP per tutti i quadri ---
+    document.querySelectorAll('.painting-frame').forEach(function(frame) {
+        const cardInner = frame.querySelector('.card-inner');
+        const flipBtn = frame.querySelector('.flip-btn');
+        if (flipBtn && cardInner) {
+            flipBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                frame.classList.toggle('flipped');
+            });
+            frame.addEventListener('mouseleave', function() {
+                frame.classList.remove('flipped');
+            });
+        }
+    });
 });
 

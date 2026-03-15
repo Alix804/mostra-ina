@@ -1,5 +1,5 @@
-/* Assicura che il contenuto retro rimanga dentro la painting-frame */
-.painting-frame.quadro1 .card-back .painting-back {
+/* Assicura che il contenuto retro rimanga dentro la painting-frame, per tutti i quadri */
+.painting-frame .card-back .painting-back {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
@@ -10,7 +10,7 @@
     justify-content: center;
     padding: 0.5rem;
 }
-.painting-frame.quadro1 .card-back .retro-content {
+.painting-frame .card-back .retro-content {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -28,14 +28,14 @@
     overflow: hidden;
     border-radius: 0.5em;
 }
-.painting-frame.quadro1 .card-back .retro-content h3, .painting-frame.quadro1 .card-back .retro-content p {
+.painting-frame .card-back .retro-content h3, .painting-frame .card-back .retro-content p {
     margin: 0.2em 0;
     line-height: 1.1;
     word-break: break-word;
     max-width: 100%;
     overflow-wrap: break-word;
 }
-.painting-frame.quadro1 .card-back .retro-content img {
+.painting-frame .card-back .retro-content img {
     max-width: 90%;
     max-height: 40%;
     height: auto;
@@ -44,23 +44,23 @@
     border-radius: 8px;
     object-fit: contain;
 }
-/* FLIP 3D quadro1 */
-/* FLIP 3D quadro1 (solo rotazione, nessun ingrandimento/spostamento) */
-.painting-frame.quadro1 {
+/* FLIP 3D per tutti i quadri (solo rotazione, nessun ingrandimento/spostamento) */
+.painting-frame {
     perspective: 1200px;
+    position: relative;
 }
-.painting-frame.quadro1 .card-inner {
+.painting-frame .card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
     transform-style: preserve-3d;
 }
-.painting-frame.quadro1.flipped .card-inner {
+.painting-frame.flipped .card-inner {
     transform: rotateY(180deg);
 }
-.painting-frame.quadro1 .card-front,
-.painting-frame.quadro1 .card-back {
+.painting-frame .card-front,
+.painting-frame .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -72,49 +72,32 @@
     align-items: center;
     justify-content: flex-end;
 }
-.painting-frame.quadro1 .card-front {
+.painting-frame .card-front {
     z-index: 2;
 }
-.painting-frame.quadro1 .card-back {
+.painting-frame .card-back {
     transform: rotateY(180deg);
     z-index: 3;
 }
 /* Mostra il flip-btn solo su hover (regola finale, prioritaria, con !important) */
-.painting-frame.quadro1 .painting .flip-btn {
+.painting-frame .painting .flip-btn {
     opacity: 0 !important;
     pointer-events: none !important;
 }
-.painting-frame.quadro1 .painting:hover .flip-btn {
+.painting-frame .painting:hover .flip-btn {
     opacity: 0.85 !important;
     pointer-events: auto !important;
 }
-/* Mostra il flip-btn solo su hover (regola finale, prioritaria) */
-.painting-frame.quadro1 .painting .flip-btn {
-    opacity: 0;
-    pointer-events: none;
-}
-.painting-frame.quadro1 .painting:hover .flip-btn {
-    opacity: 0.85;
-    pointer-events: auto;
-}
-.painting-frame.quadro1 .painting .flip-btn {
+.painting-frame .painting .flip-btn {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s;
 }
-.painting-frame.quadro1 .painting:hover .flip-btn {
+.painting-frame .painting:hover .flip-btn {
     opacity: 0.85;
     pointer-events: auto;
 }
-/* RIMOSSA regola che ingrandiva tutto il frame su flip */
-/* Bottone flip quadro1 */
-.painting-frame.quadro1 {
-    position: relative;
-}
-.painting-frame.quadro1 .painting {
-    position: relative;
-}
-.painting-frame.quadro1 .painting .flip-btn {
+.painting-frame .painting .flip-btn {
     position: absolute;
     bottom: 0.5rem;
     right: 0.5rem;
@@ -134,7 +117,7 @@
     z-index: 20;
     transition: background 0.2s, transform 0.2s, opacity 0.2s;
 }
-.painting-frame.quadro1 .painting .flip-btn:hover {
+.painting-frame .painting .flip-btn:hover {
     background: #e8dcc4;
     transform: scale(1.12);
     opacity: 1;
