@@ -101,21 +101,22 @@
     position: absolute;
     bottom: 0.5rem;
     right: 0.5rem;
+    width: 22px;
+    height: 22px;
     background: #f5f0e8;
     border: 1px solid #b8a77a;
     border-radius: 50%;
-    width: 32px;
-    height: 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    color: #8b7355;
+    font-size: 0.8rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.3rem;
-    color: #6b5d52;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-    cursor: pointer;
-    opacity: 0.85;
-    z-index: 20;
+    opacity: 0;
+    pointer-events: none;
     transition: background 0.2s, transform 0.2s, opacity 0.2s;
+    z-index: 20;
+    cursor: pointer;
 }
 .painting-frame .painting .flip-btn:hover {
     background: #e8dcc4;
@@ -633,7 +634,7 @@ header h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.95);
+    background: rgba(0, 0, 0, 0.45);
     z-index: 1000;
     overflow: hidden;
 }
@@ -648,7 +649,7 @@ header h1 {
 /* Pulsante chiusura */
 .modal-close {
     position: absolute;
-    top: 1.5rem;
+    top: 5.5rem;
     right: 2rem;
     background: transparent;
     border: none;
@@ -670,13 +671,14 @@ header h1 {
 
 /* Barra miniature */
 .modal-thumbnails {
-    position: absolute;
-    top: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
     display: flex;
     gap: 0.5rem;
-    z-index: 1001;
+    justify-content: center;
+    align-items: center;
+    margin: 1.2rem 0 1.2rem 0;
+    width: 100%;
+    z-index: 10;
 }
 
 .thumbnail-item {
@@ -725,10 +727,11 @@ header h1 {
 
 /* Contenitore modale */
 .modal-container {
-    width: 95%;
-    max-width: 1800px;
-    height: 85vh;
-    max-height: 900px;
+    width: 98%;
+    max-width: 1400px;
+    height: 78vh;
+    max-height: 90vh;
+    padding: 0.7rem 1.2rem;
     background-color: #d0c8b8;
     background-image: url('assets/imgi_1_rough-beige-paper-texture.jpg'); /* Cambia qui il file se vuoi un altro sfondo */
     background-size: 100% 100%;
@@ -740,7 +743,7 @@ header h1 {
         inset 0 0 30px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 /* Dettaglio singola opera */
@@ -748,10 +751,12 @@ header h1 {
     display: none;
     width: 100%;
     height: 100%;
-    padding: 1rem;
+    padding: 2.2rem 2.2rem 2.2rem 2.2rem;
     gap: 0;
-    align-items: flex-start;
+    align-items: stretch;
     position: relative;
+    box-sizing: border-box;
+    margin-top: 2,5rem;
 }
 
 .painting-detail.active {
@@ -759,22 +764,28 @@ header h1 {
 }
 
 .painting-detail img {
-    max-width: 20%;
-    max-height: 100%;
+    max-width: 28vw;
+    max-height: 60vh;
     object-fit: contain;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
     border: 8px solid #dad3cb;
     flex-shrink: 0;
+    margin-left: 2vw;
 }
 
 /* Info opera */
 .painting-info {
-    flex: 1;
-    padding: 0.2rem 0.8rem;
+    flex: 1 1 0;
+    padding: 0.2rem 1.5rem 0.2rem 0.2rem;
     color: #2c2416;
-    overflow-y: hidden;
+    overflow-y: auto;
     height: 100%;
-    column-count: 3;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Colonne solo se tanto testo */
+    column-count: 1;
     column-gap: 1.2rem;
     column-rule: 1px solid #d0c8b8;
     column-fill: auto;
@@ -841,7 +852,7 @@ header h1 {
     position: absolute;
     bottom: 1rem;
     right: 1rem;
-    max-width: 40%;
+    max-width: 32vw;
     max-height: 25vh;
     object-fit: contain;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -850,32 +861,38 @@ header h1 {
 /* Responsive modale */
 @media (max-width: 768px) {
     .modal-container {
-        width: 95%;
-        height: 80vh;
-        margin-top: 4rem;
+        width: 100vw;
+        height: 90vh;
+        margin-top: 2vw;
+        max-width: 100vw;
+        max-height: 97vh;
+        padding: 0.4rem 0.2rem;
     }
 
     .painting-detail {
         flex-direction: column;
-        padding: 1rem;
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
         overflow-y: auto;
+        align-items: stretch;
     }
 
     .painting-detail img {
-        max-width: 90%;
-        max-height: 40%;
+        max-width: 95vw;
+        max-height: 30vh;
+        margin-left: 0;
     }
 
     .painting-info {
-        padding: 1rem;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        min-width: 0;
     }
 
     .painting-info h2 {
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
 
     .painting-info p {
-        font-size: 1rem;
+        font-size: 0.98rem;
     }
 
     .thumbnail-item {
