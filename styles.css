@@ -1,3 +1,67 @@
+/* Mostra il flip-btn solo su hover (regola finale, prioritaria, con !important) */
+.painting-frame.quadro1 .painting .flip-btn {
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+.painting-frame.quadro1 .painting:hover .flip-btn {
+    opacity: 0.85 !important;
+    pointer-events: auto !important;
+}
+/* Mostra il flip-btn solo su hover (regola finale, prioritaria) */
+.painting-frame.quadro1 .painting .flip-btn {
+    opacity: 0;
+    pointer-events: none;
+}
+.painting-frame.quadro1 .painting:hover .flip-btn {
+    opacity: 0.85;
+    pointer-events: auto;
+}
+.painting-frame.quadro1 .painting .flip-btn {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+.painting-frame.quadro1 .painting:hover .flip-btn {
+    opacity: 0.85;
+    pointer-events: auto;
+}
+.painting-frame.quadro1.flipped {
+    z-index: 10;
+    transform: scale(2) translateY(40px) rotateY(180deg);
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+/* Bottone flip quadro1 */
+.painting-frame.quadro1 {
+    position: relative;
+}
+.painting-frame.quadro1 .painting {
+    position: relative;
+}
+.painting-frame.quadro1 .painting .flip-btn {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    background: #f5f0e8;
+    border: 1px solid #b8a77a;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: #6b5d52;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    cursor: pointer;
+    opacity: 0.85;
+    z-index: 20;
+    transition: background 0.2s, transform 0.2s, opacity 0.2s;
+}
+.painting-frame.quadro1 .painting .flip-btn:hover {
+    background: #e8dcc4;
+    transform: scale(1.12);
+    opacity: 1;
+}
 .gallery-wall-container {
     width: 100%;
     max-width: 1400px;

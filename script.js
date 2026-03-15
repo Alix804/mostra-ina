@@ -161,5 +161,15 @@ document.addEventListener('DOMContentLoaded', function() {
             showPainting(nextIndex);
         }
     });
+
+    // --- FLIP quadro1 ---
+    const quadro1 = document.querySelector('.painting-frame.quadro1');
+    const flipBtn = quadro1 ? quadro1.querySelector('.flip-btn') : null;
+    if (flipBtn && quadro1) {
+        flipBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            quadro1.classList.toggle('flipped');
+        });
+    }
 });
 
