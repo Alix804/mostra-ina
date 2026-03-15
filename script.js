@@ -91,12 +91,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Apertura modale al click su quadro
-    paintings.forEach(painting => {
-        painting.addEventListener('click', function() {
-            const index = parseInt(this.getAttribute('data-painting-index'));
-            modal.classList.add('active');
-            showPainting(index);
-            document.body.style.overflow = 'hidden'; // Blocca scroll
+    // Apertura modale al click su painting-frame (sia fronte che retro)
+    document.querySelectorAll('.painting-frame').forEach(frame => {
+        frame.addEventListener('click', function(e) {
+            // Evita che il click sul bottone flip apra la modale
+            if (e.target.closest('.flip-btn')) return;
+            // Trova l'indice dal painting interno
+            const painting = frame.querySelector('.painting');
+            const index = painting ? painting.getAttribute('data-painting-index') : null;
+            if (index !== null) {
+                modal.classList.add('active');
+                showPainting(parseInt(index));
+                document.body.style.overflow = 'hidden'; // Blocca scroll
+            }
         });
     });
 
