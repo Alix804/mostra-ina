@@ -171,5 +171,12 @@ document.addEventListener('DOMContentLoaded', function() {
             quadro1.classList.toggle('flipped');
         });
     }
+
+    // Flip automatico: torna al fronte quando il mouse esce dal quadro1
+    if (quadro1) {
+        quadro1.addEventListener('mouseleave', function() {
+            quadro1.classList.remove('flipped');
+        });
+    }
 });
 

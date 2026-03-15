@@ -1,3 +1,84 @@
+/* Assicura che il contenuto retro rimanga dentro la painting-frame */
+.painting-frame.quadro1 .card-back .painting-back {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+.painting-frame.quadro1 .card-back .retro-content {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    word-break: break-word;
+    white-space: pre-line;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3em 0.5em;
+    font-size: clamp(0.9rem, 2vw, 1.15rem);
+    background: #b6d6f6;
+    color: #2c2416;
+    overflow: hidden;
+    border-radius: 0.5em;
+}
+.painting-frame.quadro1 .card-back .retro-content h3, .painting-frame.quadro1 .card-back .retro-content p {
+    margin: 0.2em 0;
+    line-height: 1.1;
+    word-break: break-word;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+.painting-frame.quadro1 .card-back .retro-content img {
+    max-width: 90%;
+    max-height: 40%;
+    height: auto;
+    display: block;
+    margin: 1rem auto 0 auto;
+    border-radius: 8px;
+    object-fit: contain;
+}
+/* FLIP 3D quadro1 */
+/* FLIP 3D quadro1 (solo rotazione, nessun ingrandimento/spostamento) */
+.painting-frame.quadro1 {
+    perspective: 1200px;
+}
+.painting-frame.quadro1 .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+}
+.painting-frame.quadro1.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+.painting-frame.quadro1 .card-front,
+.painting-frame.quadro1 .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.painting-frame.quadro1 .card-front {
+    z-index: 2;
+}
+.painting-frame.quadro1 .card-back {
+    transform: rotateY(180deg);
+    z-index: 3;
+}
 /* Mostra il flip-btn solo su hover (regola finale, prioritaria, con !important) */
 .painting-frame.quadro1 .painting .flip-btn {
     opacity: 0 !important;
@@ -25,11 +106,7 @@
     opacity: 0.85;
     pointer-events: auto;
 }
-.painting-frame.quadro1.flipped {
-    z-index: 10;
-    transform: scale(2) translateY(40px) rotateY(180deg);
-    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
-}
+/* RIMOSSA regola che ingrandiva tutto il frame su flip */
 /* Bottone flip quadro1 */
 .painting-frame.quadro1 {
     position: relative;
