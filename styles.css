@@ -905,3 +905,45 @@ header h1 {
         font-size: 2.5rem;
     }
 }
+
+/* CARTIGLIO ELEGANTE STILE MUSEO */
+.raccordo-cartiglio {
+    position: absolute;
+    bottom: 1rem;
+    right: 0rem;
+    background: rgba(255, 248, 235, 0.55); /* pergamena */
+    border: 1px solid #c8b8a0;
+    border-radius: 0 ;
+    padding: 0.6rem 1rem;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: #3a2f22;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.25);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    max-width: 260px;
+    z-index: 50;
+}
+
+.raccordo-cartiglio:hover {
+    background: rgba(255, 248, 235, 0.95);
+}
+
+/* TESTO NASCOSTO */
+.raccordo-testo {
+    display: none;
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    line-height: 1.35;
+    color: #3a2f22;
+}
+
+/* QUANDO ATTIVO */
+.raccordo-cartiglio.attivo {
+    padding-bottom: 1rem;
+}
+
+.raccordo-cartiglio.attivo .raccordo-testo {
+    display: block;
+}

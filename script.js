@@ -75,7 +75,18 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentIndex = 0;
 
     // Funzione per mostrare opera specifica
-    function showPainting(index) {
+    window.showPainting = function showPainting(index) {
+        // Chiudi tutti i cartigli attivi e resetta il testo
+        document.querySelectorAll('.raccordo-cartiglio.attivo').forEach(cartiglio => {
+            cartiglio.classList.remove('attivo');
+            const testoBox = cartiglio.querySelector('.raccordo-testo');
+            if (testoBox) {
+                // Ripristina il testo completo (senza animazione)
+                const fullText = testoBox.getAttribute('data-fulltext');
+                if (fullText) testoBox.textContent = fullText;
+            }
+        });
+
         // Nascondi tutti i dettagli
         paintingDetails.forEach(detail => detail.classList.remove('active'));
         thumbnails.forEach(thumb => thumb.classList.remove('active'));
